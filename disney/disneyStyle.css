@@ -675,8 +675,39 @@ section img {
     text-decoration: underline;
 }
 
+/* Responsive Design for Tablets */
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        width: 240px;
+        padding-top: 15px;
+    }
 
-/* Responsive Design for Smaller Screens */
+    .content {
+        margin-left: 240px;
+        padding: 25px;
+    }
+
+    section img {
+        max-width: 90%; /* Adjust image size for smaller screens */
+    }
+
+    #about-me .about-photo img, #work-experience .work-photo img {
+        width: 100%; /* Make photos full-width */
+        max-width: 100%;
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+
+    .about-container, .work-container {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .about-text, .work-details {
+        margin-left: 0;
+    }
+}
+
+/* Responsive Design for Phones */
 @media screen and (max-width: 768px) {
     .sidebar {
         width: 100%; /* Sidebar becomes full-width */
@@ -722,6 +753,35 @@ section img {
 
     .sidebar h2.open:after {
         transform: rotate(-180deg);
+    }
+
+    section img {
+        max-width: 100%; /* Ensure images take full width on mobile */
+    }
+
+    .about-container, .work-container, .education-container {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .about-photo img, .work-photo img, .education-photo img {
+        width: 100%; /* Make photos full-width */
+        max-width: 100%;
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+
+    .about-text, .work-details, .education-details {
+        margin-left: 0;
+    }
+
+    /* Adjust font sizes for mobile */
+    h2 {
+        font-size: 2em;
+    }
+
+    p, ul {
+        font-size: 1em;
+        line-height: 1.6;
     }
 }
 
