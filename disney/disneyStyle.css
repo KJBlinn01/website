@@ -147,48 +147,83 @@ section img {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7); /* Adds a shadow to images */
 }
 
-/* Welcome Section */
+/* Welcome Section Styling */
 #welcome {
-    background-color: #272527; /* Matches the rest of the content */
+    background-color: #272527;
     padding: 30px;
     border-radius: 10px;
-    text-align: center;
     margin-bottom: 20px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 #welcome h2 {
-    color: #FD0000; /* Red for section headers */
+    color: #FD0000;
     font-size: 2.5em;
     font-weight: bold;
     letter-spacing: 1.5px;
     margin-bottom: 20px;
-    text-transform: uppercase; /* Makes the header text uppercase */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adds a subtle text shadow */
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#welcome h3 {
+    color: #F5F3F4;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: italic;
 }
 
 #welcome p {
-    font-size: 1.5em;
-    line-height: 1.8;
-    color: #F5F3F4; /* White text */
+    font-size: 1.3em;
+    color: #F5F3F4;
     font-weight: bold;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 #welcome ul {
-    font-size: 1.3em;
-    line-height: 2;
-    color: #F5F3F4; /* White text */
-    text-align: left;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #F5F3F4;
     list-style-type: none;
+    padding-left: 30px;
+    margin-left: 20px; /* Tab over list items */
 }
 
 #welcome ul li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
 }
+
+.welcome ul li::before {
+    content: "\f1c6"; /* Font Awesome icon for bullet */
+    font-family: FontAwesome;
+    margin-right: 10px;
+    color: #FD0000;
+    font-size: 1.3em;
+}
+
+.highlight {
+    color: #FD0000;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#welcome ul li em {
+    font-style: italic;
+    color: #FD0000;
+}
+
+.ready-to-join {
+    margin-top: 40px; /* Increase space above this statement */
+    text-align: center;
+}
+
+
 
 #welcome img {
     width: 80%;
@@ -198,16 +233,6 @@ section img {
     margin-top: 30px;
     border-radius: 10px; /* Rounds the corners of the image */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7); /* Adds a shadow to the image */
-}
-
-.bullet-icon {
-    margin-right: 10px;
-    color: #FD0000; /* Red color to match theme */
-}
-
-.highlight {
-    color: #FD0000; /* Red to emphasize key points */
-    font-weight: bold;
 }
 
 
