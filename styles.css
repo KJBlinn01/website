@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #010D26;
-    color: #ffffff;
+    background-color: #F4F4F9; /* Light neutral background */
+    color: #333333; /* Dark charcoal text color */
 }
 
 .main {
@@ -12,10 +12,12 @@ body {
     z-index: -1;
     padding: 0 20px;
 }
+
 .main h1 {
     text-align: center;
-    color: #F22E76;
+    color: #FF6F61; /* Warm coral color for main headers */
 }
+
 .main img {
     display: block;
     margin-left: auto;
@@ -23,195 +25,73 @@ body {
     width: 50%;
     border-radius: 8px;
 }
+
 .main h2 {
     text-align: center;
-    color: #118EBF;
+    color: #4A90E2; /* Calm blue for secondary headers */
 }
+
 .main p {
     text-align: center;
     font-size: 18px;
     line-height: 1.6;
 }
 
-.cpsc3750 h1 {
-    text-align: center;
-    color: #ffffff;
-    background-color: #F22E76;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.cpsc3750 h2 {
-    text-align: center;
-    color: #FFB00B;
-}
-
-.cpsc3750 p {
-    text-align: left;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.cpsc3750 ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background-color: #023373;
-    overflow: hidden;
-}
-
-.cpsc3750 li {
-    float: left;
-}
-
-.cpsc3750 a {
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.cpsc3750 a:hover {
-    background-color: #F22E76;
-}
-
-.cpsc3750 .active {
-    background-color: #F22E76;
-}
-
-.pdf {
-    width: 100%;
-    aspect-ratio: 4/3;
-    height: 100%;
-}
-.content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-}
-.content .socials, .content .photo {
-    flex: 1;
-}
-.content .socials {
-    text-align: center;
-}
 .socials a {
-    color: #118EBF;
+    color: #4A90E2; /* Consistent use of secondary blue color */
     text-decoration: none;
     margin: 0 10px;
     font-size: 24px;
 }
+
 .socials a:hover {
-    color: #F22E76;
+    color: #FF6F61; /* Coral color on hover for contrast */
 }
+
 .photo img {
     width: 100%;
     max-width: 300px;
     border-radius: 8px;
 }
+
 .stats img {
     display: block;
     margin: 20px auto;
 }
-.languages-tools .logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.logos a {
+
+.languages-tools .logos a {
     margin: 10px;
 }
-.logos img {
+
+.languages-tools .logos img {
     width: 60px;
     height: 60px;
-}
-/* Video Container */
-.video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-}
-
-.video-container iframe {
-    max-width: 100%;
-    max-width: 800px;
-    height: 400px;
-}
-
-/* Image Row */
-.image-nav-container {
-    display: flex;
-    justify-content: space-around; 
-    align-items: center;
-    margin: 20px 0;
-}
-
-.image-item {
-    text-align: center;
-}
-
-.image-item img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #000000; 
 }
 
 .image-item a {
     display: block;
-    margin-top: 40px; /* Space between image and button */
+    margin-top: 20px;
     padding: 10px 20px;
-    background-color: #004080;
+    background-color: #4A90E2; /* Blue for buttons */
     color: white;
     text-decoration: none;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px;
 }
 
 .image-item a:hover {
-    background-color: #003366; 
-}
-
-.image-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.image-item {
-    width: 65%; /* Adjust the width as needed */
-    height: auto;
-}
-
-/* Favorites Section */
-.favorites-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-
-}
-
-.favorite-item {
-    width: 50%; 
-    margin-bottom: 20px;
-}
-
-.favorite-item img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #000000;
+    background-color: #FFA726; /* Vibrant orange on hover */
 }
 
 .favorite-item h3 {
     text-align: center;
-    margin: 10px 0;
+    color: #FF6F61; /* Use coral color for consistency */
 }
 
 .favorite-item p {
     text-align: center;
     margin: 0;
 }
+
 @media screen and (max-width: 768px) {
     .sidebar {
         width: 100%;

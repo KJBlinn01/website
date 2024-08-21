@@ -1,5 +1,3 @@
-/* CSS was followed from the tutorial that you gave us */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
@@ -9,9 +7,11 @@
   font-family: 'Poppins', sans-serif;
 }
 .wrapper{
-  background: #023373;
+  background: #4A90E2; /* Updated to match new color palette */
   position: fixed;
+  top: 0; /* Prevents content from being blocked */
   width: 100%;
+  z-index: 1000; /* Ensures the navbar stays on top */
 }
 .wrapper nav{
   position: relative;
@@ -53,7 +53,7 @@ nav .content .links{
 }
 .content .links li a:hover,
 .content .links li label:hover{
-  background: #F22E76;
+  background: #FF6F61; /* Updated hover color */
 }
 .wrapper .search-icon,
 .wrapper .menu-icon{
@@ -90,7 +90,7 @@ nav .content .links{
   outline: none;
   font-size: 17px;
   color: #fff;
-  background: #023373;
+  background: #4A90E2; /* Matches navbar color */
   padding: 0 100px 0 15px;
 }
 .search-box input::placeholder{
@@ -103,7 +103,7 @@ nav .content .links{
   transform: translateY(-50%);
   line-height: 60px;
   width: 70px;
-  background: #023373;
+  background: #4A90E2;
   border: none;
   outline: none;
   color: #fff;
@@ -116,7 +116,7 @@ nav .content .links{
 /* Dropdown Menu code start */
 .content .links ul{
   position: absolute;
-  background: #023373;
+  background: #FF6F61; /* Updated background for dropdowns */
   top: 80px;
   z-index: -1;
   opacity: 0;
@@ -174,7 +174,7 @@ nav .content .links{
   nav .content .links{
     display: block;
     position: fixed;
-    background: #010D26;
+    background: #010D26; /* Adjusted to maintain contrast */
     height: 100%;
     width: 100%;
     top: 70px;
@@ -212,11 +212,9 @@ nav .content .links{
     max-height: 0px;
     overflow: hidden;
   }
-  .content .links #show-features:checked ~ ul,
-  .content .links #show-group:checked ~ ul,
-  .content .links #show-exam:checked ~ ul,
-  .content .links #show-major:checked ~ ul,
-  .content .links #show-items:checked ~ ul{
+  .content .links #show-classes:checked ~ ul,
+  .content .links #show-3750:checked ~ ul,
+  .content .links #show-3760:checked ~ ul{
     max-height: 100vh;
   }
   .content .links ul li{
