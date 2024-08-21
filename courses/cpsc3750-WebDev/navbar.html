@@ -1,0 +1,104 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: June 15th, 2024
+    Assignment: Prog08 - Common Navbar
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Prog08: Common NavBar </title>
+  <link rel="stylesheet" href="./navStyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#">Kevin Blinn</a></div>
+        <ul class="links">
+
+          <!-- Home and CPSC 3750 Github Links -->
+          <li><a href="https://kjblinn.com/">Home</a></li>
+          <li><a href="https://github.com/CPSC-3750-Coursework/Kblinn">CPSC 3750 Github</a></li>
+
+          <!-- Projects Dropdown -->
+          <li>
+            <a href="https://kjblinn.com/projects-main.html" class="desktop-link">Projects</a>
+            <input type="checkbox" id="show-features">
+            <label for="show-features">Projects</label>
+            <ul>
+              <li><a href="https://kjblinn.com/projects/prog16/index.html">Prog16</a></li>
+              <li><a href="https://kjblinn.com/projects/prog15/index.html">Prog15</a></li>
+              <li><a href="https://kjblinn.com/projects/prog14/public/index.html">Prog14</a></li>
+              <li><a href="https://kjblinn.com/projects/prog13/index.html">Prog13</a></li>
+              <li><a href="https://kjblinn.com/projects/prog12/livesearch.html">Prog12</a></li>
+              <li><a href="https://kjblinn.com/projects/prog11/jQuery.html">Prog11</a></li>
+              <li><a href="https://kjblinn.com/projects/prog10/keypress.html">Prog10</a></li>
+              <li><a href="https://kjblinn.com/projects/prog09/cards.html">Prog09</a></li>
+              <li><a href="https://kjblinn.com/projects/prog08/navbar.html">Prog08</a></li>
+              <li><a href="https://kjblinn.com/projects/prog07/sort.html">Prog07</a></li>
+              <li><a href="https://kjblinn.com/projects/prog06/ButtonMove.html">Prog06</a></li>
+              <li><a href="https://kjblinn.com/projects/prog05/helloworld.php">Prog05</a></li>
+              <li><a href="https://kjblinn.com/projects/prog04/prog04.html">Prog04</a></li>
+              <li><a href="https://kjblinn.com/projects/prog03/headquarters.html">Prog03</a></li>
+              <li><a href="https://kjblinn.com/projects/prog02/layout.html">Prog02</a></li>
+            </ul>
+          </li>
+
+          <!-- Group Work Dropdown-->
+          <li>
+            <a href="#" class="desktop-link">Group</a>
+            <input type="checkbox" id="show-group">
+            <label for="show-group">Group</label>
+            <ul>
+              <li><a href="https://kjblinn.com/group/group04/GroupCSS7.html">Group07</a></li>
+              <li><a href="https://kjblinn.com/group/group06/forms.html">Group06</a></li>
+              <li><a href="https://kjblinn.com/group/group05/hangman.html">Group05</a></li>
+              <li><a href="https://kjblinn.com/group/group04/GroupCSS4.html">Group04</a></li>
+              <li><a href="https://kjblinn.com/group/group03/GroupCSS3.html">Group03</a></li>
+              <li><a href="https://kjblinn.com/group/group02/GroupCSS2.html">Group02</a></li>
+              <li><a href="https://kjblinn.com/group/group01/GroupCSS1.html">Group01</a></li>
+            </ul>
+          </li>
+
+          <!--Programming Exam DropDown-->
+          <li>
+            <a href="#" class="desktop-link">Exam</a>
+            <input type="checkbox" id="show-exam">
+            <label for="show-exam">Exam</label>
+            <ul>
+              <li><a href="https://kjblinn.com/PE01/prime.html">Exam#1</a></li>
+              <li><a href="https://kjblinn.com/PE02/index.html">Exam#2</a></li>
+            </ul>
+          </li>
+
+          <!--Major Prog-->
+          <li>
+            <a href="#" class="desktop-link">Major Prog</a>
+            <input type="checkbox" id="show-major">
+            <label for="show-major">Major Prog</label>
+            <ul>
+              <li><a href="https://kjblinn.com/major-prog/project01/index.html">Project 1</a></li>
+              <li><a href="https://kjblinn.com/major-prog/project02/index.html">Project 2</a></li>
+              <li><a href="https://kjblinn.com/major-prog/project03/index.html">Project 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+  </div>
+</body>
+</html>

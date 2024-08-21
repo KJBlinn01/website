@@ -1,0 +1,195 @@
+/*
+  Name: Kevin Blinn
+  Class: CPSC 3750
+  Date Due: July 20th, 2024
+  Assignment: Project 02 - Collect App Phase 1
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #010D26;
+    color: #ffffff;
+}
+
+header{
+    padding-bottom: 8%;
+}
+
+p {
+    text-align: center;
+    margin: 20px;
+}
+
+main nav {
+    background-color: #023373;
+    padding: 15px 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+main nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    gap: 20px; 
+}
+
+main nav ul li {
+    display: inline; 
+    margin-right: 20px; 
+}
+
+main nav ul li:last-child {
+    margin-right: 0; 
+}
+
+main nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+}
+
+main nav ul li a:hover {
+    text-decoration: none; 
+    background-color: #118EBF; 
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #023373;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: #F22E76;
+    background-color: #010D26;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+    color: #FFB00B;
+    background-color: #010D26;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.search-form {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    font-size: 16px;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+    background-color: #010D26;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.search-form input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+    background-color: #F22E76;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.search-form input[type="submit"]:hover {
+    background-color: #118EBF;
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.game-card {
+    border: 2px solid #118EBF;
+    padding: 10px;
+    width: 200px;
+    background-color: #010D26;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.game-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.game-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #FFB00B;
+}
+
+.game-card p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.game-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #F22E76;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #118EBF;
+}
+
+.game-card a:hover {
+    background-color: #118EBF;
+}
+
+.game-details {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #023373;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+}
+
+.container a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+    background-color: #F22E76;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .container a:hover {
+    background-color: #118EBF;
+  }

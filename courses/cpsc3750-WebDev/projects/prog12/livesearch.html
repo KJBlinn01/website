@@ -1,0 +1,56 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: July 13th, 2024
+    Assignment: Prog12 - AJAX & PHP
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AJAX Live Search Example</title>
+    <script type="text/javascript" src="ajax.js"></script>
+    <link href="prog12.css" rel="stylesheet" type="text/css">
+    <script src="../../load-navbar.js" defer></script>
+    <link href="../../navStyle.css" rel="stylesheet" type="text/css">
+  </head>
+   <body>
+      <!--NavBar-->
+      <header>
+        <div id="navbar-placeholder"></div>
+      </header>
+
+      <main>
+        <!--Description-->
+        <div class="description">
+          <h1>Prog12: AJAX & PHP</h1>
+          <p>The purpose of this assignment is to enhance the search 
+            functionality of a web application by modifying and expanding upon 
+            the existing live search example from the textbook source code. By 
+            transitioning the search data from names to states and their 
+            capitals, this assignment aims to implement an incremental search 
+            feature that dynamically displays matching capitals as the user 
+            types the name of a state.
+          </p>
+        </div>
+
+        <br><hr><br>
+
+        <!--Live Search-->
+        <h1>AJAX Live Search Example</h1>
+        <p>In the textbox below, type the name a state and the capital that matches the state being typed will display in the results section.</p>
+        <p><strong>Type a State:</strong>
+        <input type="text" size="40" id="searchlive" onkeyup="showResults(this.value)"></p>
+
+        <!--Display the Results of the Search -->
+        <div id="results">
+          <h2>Capitals:</h2>
+          <ul id="list">
+            <li>Capitals will display when you type a state...</li>
+          </ul>
+        </div>
+
+      </main>
+     <script type="text/javascript" src="search.js"></script>
+   </body>
+</html>

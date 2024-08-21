@@ -1,0 +1,66 @@
+<!--
+   Name: Kevin Blinn
+   Date: June 15th 2024
+   Course: CPSC 3750
+   Assignment: Programming Exam 01 
+   Grade Level: A
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="prime.css">
+        <link rel="stylesheet" href="../../navStyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <script src="../../load-navbar.js" defer></script>
+        <script src="prime.js" defer></script>
+        <title>Prime Number Checker</title>
+    </head>
+    <body>
+        <header>
+            <div id="navbar-placeholder"></div>
+        </header>
+
+        <!--Main Content-->
+        <div class="main">
+            <h1>Prime Number Checker</h1>
+            
+            <br>
+
+            <!--Input Field-->
+            <form name="inputField">
+                Please Enter a Number:
+                <input type="number" id="numberEntered" placeholder="Enter a Number Here">
+                <button type="button" id="addNumber" onclick="getNumbers()">START</button>
+                <button type="button" onclick="clearNumbers()">CLEAR LISTS</button>
+            
+                <hr>
+                <br>
+
+                <!--Prime Numbers List-->
+                <div class="list" id="primeList">
+                    <h2>Prime Numbers Lists:</h2>
+                    <textarea id="primeNumbers" cols="20" rows="10"></textarea>
+
+                    <!--Sum of Prime Numbers-->
+                    <button type="button" onclick="primeSum()">SUM</button>
+                    <p id="primeSum"></p>
+                </div>
+                
+                <div class="list" id="nonPrimeList">
+                    <!--Non-Prime Numbers List-->
+                    <h2>Non-Prime Numbers Lists:</h2>
+                    <textarea id="nonPrimeNumbers" cols="20" rows="10"></textarea>
+
+                    <!--Sum of Non-Prime Numbers-->
+                    <button type="button" onclick="nonPrimeSum()">SUM</button>
+                    <p id="nonPrimeSum"></p>
+    
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,363 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: June 1st, 2024
+    Assignment: Group02 - More CSS
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin's Dead by Daylight Site</title>
+    <link rel="stylesheet" href="group02.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><img src="images/dbd-logo.jpg"></li>
+                <li><a href="#dbd">What is DBD?</a></li>
+                <li><a href="#killers">Killers</a></li>
+                <li><a href="#favorite">Favorite Killers</a></li>
+                <li><a href="#perks">Perks and Effects</a></li>
+                <li><a href="#survivors">Survivors</a></li>
+                <li><a href="#follow">Follow Dead by Daylight</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!--Home Background Photo-->
+        <div class="home-image">
+            <img src="images/dbd-photo.jpg" alt="Dead by Daylight Home Image">
+        </div>
+
+        <!-- Dead by Daylight Section -->
+        <section id="dbd">
+            <h2>What is Dead by Daylight?</h2>
+            <p>
+                Dead by Daylight is a multiplayer horror game where one player takes on the role of the killer and four other players take on the role of survivors. The killer's goal is to sacrifice the survivors to the Entity, while the survivors' goal is to escape the trial. The game features a variety of killers, survivors, and perks to choose from.
+            </p>
+        </section>
+        
+        <!-- Killers Section -->
+        <section id="killers">
+            <h2>Killers</h2>
+        <div class="killer-list">
+            <p>In Dead by Daylight, the Killer role is pivotal, offering a unique and thrilling gameplay experience focused on hunting down and eliminating survivors. As the Killer, your primary objective is to prevent survivors from escaping the trial by capturing and sacrificing them to the Entity. There are currently 36 Killers in Dead by Daylight and they are listed in a photo gallery below:</p>
+            <div class="gallery">
+                <!--The Trapper -->
+                <div class="gallery-item">
+                    <img src="images/K01_TheTrapper_Portrait.webp" alt="The Trapper">
+                    <p>The Trapper</p>
+                </div>
+                <!--The Wraith -->
+                <div class="gallery-item">
+                    <img src="images/K02_TheWraith_Portrait.webp" alt="The Wraith">
+                    <p>The Wraith</p>
+                </div>
+                <!--The Hillbilly -->
+                <div class="gallery-item">
+                    <img src="images/K03_TheHillbilly_Portrait.webp" alt="The Hillbilly">
+                    <p>The Hillbilly</p>
+                </div>
+                <!--The Nurse -->
+                <div class="gallery-item">
+                    <img src="images/K04_TheNurse_Portrait.webp" alt="The Nurse">
+                    <p>The Nurse</p>
+                </div>
+                <!--The Shape -->
+                <div class="gallery-item">
+                    <img src="images/K05_TheShape_Portrait.webp" alt="The Shape">
+                    <p>The Shape</p>
+                </div>
+                <!--The Hag -->
+                <div class="gallery-item">
+                    <img src="images/K06_TheHag_Portrait.webp" alt="The Hag">
+                    <p>The Hag</p>
+                </div>
+                <!--The Doctor -->
+                <div class="gallery-item">
+                    <img src="images/K07_TheDoctor_Portrait.webp" alt="The Doctor">
+                    <p>The Doctor</p>
+                </div>
+                <!--The Huntress -->
+                <div class="gallery-item">
+                    <img src="images/K08_TheHuntress_Portrait.webp" alt="The Huntress">
+                    <p>The Huntress</p>
+                </div>
+                <!--The Cannibal -->
+                <div class="gallery-item">
+                    <img src="images/K09_TheCannibal_Portrait.webp" alt="The Cannibal">
+                    <p>The Cannibal</p>
+                </div>
+                <!--The Nightmare -->
+                <div class="gallery-item">
+                    <img src="images/K10_TheNightmare_Portrait.webp" alt="The Nightmare">
+                    <p>The Nightmare</p>
+                </div>
+                <!--The Pig -->
+                <div class="gallery-item">
+                    <img src="images/K11_ThePig_Portrait.webp" alt="The Pig">
+                    <p>The Pig</p>
+                </div>
+                <!--The Clown -->
+                <div class="gallery-item">
+                    <img src="images/K12_TheClown_Portrait.webp" alt="The Clown">
+                    <p>The Clown</p>
+                </div>
+                <!--The Spirit -->
+                <div class="gallery-item">
+                    <img src="images/K13_TheSpirit_Portrait.webp" alt="The Spirit">
+                    <p>The Spirit</p>
+                </div>
+                <!--The Legion -->
+                <div class="gallery-item">
+                    <img src="images/K14_TheLegion_Portrait.webp" alt="The Legion">
+                    <p>The Legion</p>
+                </div>
+                <!--The Plague -->
+                <div class="gallery-item">
+                    <img src="images/K15_ThePlague_Portrait.webp" alt="The Plague">
+                    <p>The Plague</p>
+                </div>
+                <!--The Ghost Face -->
+                <div class="gallery-item">
+                    <img src="images/K16_TheGhostFace_Portrait.webp" alt="The Ghost Face">
+                    <p>The Ghost Face</p>
+                </div>
+                <!--The Demogorgon -->
+                <div class="gallery-item">
+                    <img src="images/K17_TheDemogorgon_Portrait.webp" alt="The Demogorgon">
+                    <p>The Demogorgon</p>
+                </div>
+                <!--The Oni -->
+                <div class="gallery-item">
+                    <img src="images/K18_TheOni_Portrait.webp" alt="The Oni">
+                    <p>The Oni</p>
+                </div>
+                <!--The Deathslinger -->
+                <div class="gallery-item">
+                    <img src="images/K19_TheDeathslinger_Portrait.webp" alt="The Deathslinger">
+                    <p>The Deathslinger</p>
+                </div>
+                <!--The Executioner -->
+                <div class="gallery-item">
+                    <img src="images/K20_TheExecutioner_Portrait.webp" alt="The Executioner">
+                    <p>The Executioner</p>
+                </div>
+                <!--The Blight -->
+                <div class="gallery-item">
+                    <img src="images/K21_TheBlight_Portrait.webp" alt="The Blight">
+                    <p>The Blight</p>
+                </div>
+                <!--The Twins -->
+                <div class="gallery-item">
+                    <img src="images/K22_TheTwins_Portrait.webp" alt="The Twins">
+                    <p>The Twins</p>
+                </div>
+                <!--The Trickster -->
+                <div class="gallery-item">
+                    <img src="images/K23_TheTrickster_Portrait.webp" alt="The Trickster">
+                    <p>The Trickster</p>
+                </div>
+                <!--The Nemesis -->
+                <div class="gallery-item">
+                    <img src="images/K24_TheNemesis_Portrait.webp" alt="The Nemesis">
+                    <p>The Nemesis</p>
+                </div>
+                <!--The Cenobite -->
+                <div class="gallery-item">
+                    <img src="images/K25_TheCenobite_Portrait.webp" alt="The Cenobite">
+                    <p>The Cenobite</p>
+                </div>
+                <!--The Artist -->
+                <div class="gallery-item">
+                    <img src="images/K26_TheArtist_Portrait.webp" alt="The Artist">
+                    <p>The Artist</p>
+                </div>
+                <!--The Onryō -->
+                <div class="gallery-item">
+                    <img src="images/K27_TheOnryo_Portrait.webp" alt="The Onryō">
+                    <p>The Onryō</p>
+                </div>
+                <!--The Dredge -->
+                <div class="gallery-item">
+                    <img src="images/K28_TheDredge_Portrait.webp" alt="The Dredge">
+                    <p>The Dredge</p>
+                </div>
+                <!--The Mastermind -->
+                <div class="gallery-item">
+                    <img src="images/K29_TheMastermind_Portrait.webp" alt="The Mastermind">
+                    <p>The Mastermind</p>
+                </div>
+                <!--The Knight -->
+                <div class="gallery-item">
+                    <img src="images/K30_TheKnight_Portrait.webp" alt="The Knight">
+                    <p>The Knight</p>
+                </div>
+                <!--The Skull Merchant -->
+                <div class="gallery-item">
+                    <img src="images/K31_TheSkullMerchant_Portrait.webp" alt="The Skull Merchant">
+                    <p>The Skull Merchant</p>
+                </div>
+                <!--The Singularity -->
+                <div class="gallery-item">
+                    <img src="images/K32_TheSingularity_Portrait.webp" alt="The Singularity">
+                    <p>The Singularity</p>
+                </div>
+                <!--The Xenomorph -->
+                <div class="gallery-item">
+                    <img src="images/K33_TheXenomorph_Portrait.webp" alt="The Xenomorph">
+                    <p>The Xenomorph</p>
+                </div>
+                <!--The Good Guy -->
+                <div class="gallery-item">
+                    <img src="images/K34_TheGoodGuy_Portrait.webp" alt="The Good Guy">
+                    <p>The Good Guy</p>
+                </div>
+                <!--The Unknown -->
+                <div class="gallery-item">
+                    <img src="images/K35_TheUnknown_Portrait.webp" alt="The Unknown">
+                    <p>The Unknown</p>
+                </div>
+                <!--The Lich -->
+                <div class="gallery-item">
+                    <img src="images/K36_TheLich_Portrait.webp" alt="The Lich">
+                    <p>The Lich</p>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- Favorite Killers Section -->
+        <section id="favorite">
+            <h2>Favorite Killers</h2>
+            <p>Here is a list of my Top 5 favorite killers to play as. They are listed in an ordered list:</p>
+            <ol>
+                <li>The Good Guy</li>
+                <li>The Huntress</li>
+                <li>The Nurse</li>
+                <li>The Spirit</li>
+                <li>The Blight</li>
+            </ol>
+        </section>
+
+        <!-- Perks Section -->
+        <section id="perks">
+            <h2>Favorite Killer Perks</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Perk</th>
+                        <th>Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Deadlock</td>
+                        <td>You induce mental suffering by crushing any hope of 
+                            escape. Whenever a Generator is completed, 
+                            The Entity blocks the Generator with the most 
+                            progression for 15/20/25 seconds.</td>
+                    </tr>
+                    <tr>
+                        <td>Hex: Ruin</td>
+                        <td>If a Generator isn't being worked on, that Generator
+                            starts to regress at 50/75/100% of the normal 
+                            regression speed.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Merciless Storm</td>
+                        <td>Whenever a Generator is repaired to 90 %, Survivors 
+                            repairing it are faced with continuous Skill Checks.
+                            If they miss one or stop repairing, the Generator 
+                            becomes blocked for 16/18/20 seconds.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Rapid Brutality</td>
+                        <td>Successfully hitting a Survivor with a Basic Attack 
+                            grants you a +5 % Haste Status Effect for 8/9/10 
+                            seconds.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Survivors Section -->
+        <section id="survivors">
+            <h2>Survivors</h2>
+            <div class="survivor-info">
+                <p>There are 27 survivors in Dead by Daylight. There are listed in an unordered list below:</p>
+                <ul>
+                    <li>Dwight Fairfield</li>
+                    <li>Meg Thomas</li>
+                    <li>Claudette Morel</li>
+                    <li>Jake Park</li>
+                    <li>Nea Karlsson</li>
+                    <li>Laurie Strode</li>
+                    <li>Ace Visconti</li>
+                    <li>William "Bill" Overbeck</li>
+                    <li>Feng Min</li>
+                    <li>David King</li>
+                    <li>Quentin Smith</li>
+                    <li>Detective David Tapp</li>
+                    <li>Kate Denson</li>
+                    <li>Adam Francis</li>
+                    <li>Jeff Johansen</li>
+                    <li>Jane Romero</li>
+                    <li>Ashley J. Williams</li>
+                    <li>Yui Kimura</li>
+                    <li>Zarina Kassir</li>
+                    <li>Cheryl Mason</li>
+                    <li>Felix Richter</li>
+                    <li>Élodie Rakoto</li>
+                    <li>Yun-Jin Lee</li>
+                    <li>Jill Valentine</li>
+                    <li>Leon S. Kennedy</li>
+                    <li>Mikaela Reid</li>
+                    <li>Jonah Vasquez</li>
+                    <li>Yoichi Asakawa</li>
+                    <li>Haddie Kaur</li>
+                    <li>Rebecca Chambers</li>
+                    <li>Ada Wong</li>
+                    <li>Vittorio Toscano</li>
+                    <li>Thalita Lyra</li>
+                    <li>Renato Lyra</li>
+                    <li>Gabriel Soma</li>
+                    <li>Nicolas Cage</li>
+                    <li>Ellen Ripley</li>
+                </ul>
+        </section>
+
+        <!-- Follow Dead by Daylight Section -->
+        <section id="follow">
+            <h2>Follow Dead by Daylight</h2>
+            <p>Follow Dead by Daylight on social media to stay up to date with the latest news and updates:</p>
+            <ul>
+                <li><a href="https://www.instagram.com/deadbydaylight/?hl=en"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://x.com/DeadbyDaylight"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://www.youtube.com/channel/UCaSgsFdGbwjfdawl3rOXiwQ"><i class="fab fa-youtube"></i>Youtube</a></li>
+            </ul>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Dead by Daylight Fan Site</p>
+        <p>Created by Kevin Blinn</p>
+        <p>
+            Visit my Website:
+            <a href="https://kjblinn.com">Click Here to Visit</a>
+        </p>
+    </footer>
+</body>
+</html>

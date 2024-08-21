@@ -1,0 +1,131 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: July 13th, 2024
+    Assignment: Group06 - Forms
+-->
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="../../load-navbar.js" defer></script>
+<link href="../../navStyle.css" rel="stylesheet" type="text/css">
+<title>Group06 - Forms</title>
+<link rel="stylesheet" href="group06.css">
+</head>
+<body>
+<header>
+    <!--Nav Bar-->
+    <div id="navbar-placeholder"></div>
+</header>
+
+<main>
+    <!--Description of the Assignment-->
+    <div class="description">
+        <h1>Group06: Forms</h1>
+        <p>
+            Build an app that has the following form elements:
+        </p>
+        <ul>
+            <li>Text</li>
+            <li>Text area</li>
+            <li>Hidden Data</li>
+            <li>Password</li>
+            <li>Array of Check Boxes</li>
+            <li>Radio Buttons</li>
+            <li>Selection List</li>
+            <li>File</li>
+            <li>URL</li>
+        </ul>
+    </div>
+
+    <hr><br>
+
+    <div class="theForm">
+        <h1>Group06 Form Demo</h1>
+        <form action="process_form.php" method="post" enctype="multipart/form-data">
+            
+            <!--User Enters Text-->
+            <h2> Text Input Section</h2>
+            <!-- Text input -->
+            <label for="name">Enter Your Name:</label>
+            <input type="text" id="username" name="name">
+
+            <!--Password input-->
+            <label for="password">Enter Your Password:</label>
+            <input type="password" id="password" name="password">
+
+            <br>
+    
+            <!--Hidden input-->
+            <input type="hidden" name="hiddenField" value="hiddenValue">
+
+            <!--Textarea-->
+            <label for="feedback">Please write a couple of things you like/dislike about my website so far:</label>
+            <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+    
+            <br><hr>
+
+            <!-- Checkboxes -->
+            <h2>Array of Checkboxes</h2>
+            <label>What Interests You the Most:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="sports" name="interests[]" value="Sports">
+                <label for="sports">Sports</label>
+                <input type="checkbox" id="music" name="interests[]" value="Music">
+                <label for="music">Music</label>
+                <input type="checkbox" id="gaming" name="interests[]" value="Gaming">
+                <label for="gaming">Gaming</label>
+                <input type="checkbox" id="food" name="interests[]" value="Food">
+                <label for="food">Food</label>
+            </div>
+    
+            <br><hr>
+
+            <!-- Radio buttons -->
+            <h2>Radio Buttons</h2>
+            <label>What is your Gender:</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" id="not-say" name="gender" value="NotSay">
+                <label for="not-say">Prefer Not to Say</label>
+            </div>
+    
+            <br><hr>
+
+            <!-- Selection list -->
+            <h2>Selection List</h2>
+            <label for="country">Select the Country you live in:</label>
+            <select id="country" name="country">
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">UK</option>
+            </select>
+
+            <br><hr>
+    
+            <!-- File input -->
+            <h2>File Input</h2>
+            <label for="file">Please upload the rubric for this assignment as a .pdf:</label>
+            <input type="file" id="file" name="file">
+    
+            <br><hr>
+
+            <!-- URL input -->
+            <h2>URL Input</h2>
+            <label for="website">Add the URL to your website so I can view it:</label>
+            <input type="url" id="website" name="website">
+
+            <br><hr><br>
+    
+            <!-- Submit button -->
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</main>
+</body>
+</html>

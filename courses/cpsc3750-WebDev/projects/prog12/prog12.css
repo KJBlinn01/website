@@ -1,0 +1,70 @@
+/*
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: July 13th, 2024
+    Assignment: Prog12 - AJAX & PHP
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #010D26;
+    color: #ffffff;
+}
+
+header {
+    padding-bottom: 8%;
+}
+
+h1 {
+    text-align: center;
+    color: #F22E76;
+    background-color: #010D26;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+p {
+    margin: 20px 20px;
+    font-size: 20px;
+}
+
+#searchlive {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+    background-color: #023373;
+    color: #ffffff;
+}
+
+#results {
+    margin: 20px auto;
+    width: 80%;
+}
+
+#list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #023373;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+}
+
+#list li {
+    padding: 10px;
+    border-bottom: 1px solid #118EBF;
+}
+
+#list li:last-child {
+    border-bottom: none;
+}
+
+#list li:hover {
+    background-color: #118EBF;
+    color: #010D26;
+}

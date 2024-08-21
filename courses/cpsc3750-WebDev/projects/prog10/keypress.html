@@ -1,0 +1,78 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: June 29th, 2024
+    Assignment: Prog10 - Key Press
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <script src="/personal-website/load-navbar.js" defer></script>
+    <link href="/personal-website/navStyle.css" rel="stylesheet" type="text/css">
+    <link href="prog10.css" rel="stylesheet" type="text/css">
+    <title>Prog10: Displaying Keypresses</title>
+    <script type="text/javascript">
+    function displayKey(e) {
+       // which key was pressed?
+       if (e.keyCode) {
+          var keycode=e.keyCode;
+       }  else {
+          var keycode=e.which;
+       }
+       character=String.fromCharCode(keycode);
+
+        // Convert vowels to uppercase
+         if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u') {
+             character = character.toUpperCase();
+         }
+
+         // Change the color of the page based on the color
+         var changeColorKey = character.toLowerCase();
+         switch(changeColorKey) {
+            // CASE: r || R = red 
+             case 'r':
+                document.body.style.color = 'white';
+                document.body.style.backgroundColor = 'red';
+                break;
+            
+            // CASE: g || G = green
+             case 'g':
+                document.body.style.color = 'white';
+                document.body.style.backgroundColor = 'green';
+                break;
+            
+            // CASE: b || B = blue
+             case 'b':
+                document.body.style.color = 'white';
+                document.body.style.backgroundColor = 'blue';
+                break;
+         }
+   
+       // find the object for the destination paragraph
+       var keysParagraph = document.getElementById('keys');
+   
+       // add the character to the paragraph
+       keysParagraph.innerHTML += character;
+    }
+   </script>
+  </head>
+  <body onkeypress="displayKey(event)">
+    
+    <!-- Navbar Placeholder -->
+    <header>
+      <div  id="navbar-placeholder"></div>
+    </header>
+
+    <!-- Main Content -->
+     <div class = "main">
+        <h1>Displaying Typed Characters</h1>
+        <p>This document includes a simple script that displays 
+        the keys you type as a new paragraph below. Type a few keys 
+        to try it. </p>
+        <div id="keys"></div>
+    </div>
+
+  </body>
+</html>

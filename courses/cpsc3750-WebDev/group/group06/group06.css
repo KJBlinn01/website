@@ -1,0 +1,102 @@
+/*
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: July 13th, 2024
+    Assignment: Group06 - Forms
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #010D26;
+    color: #ffffff;
+}
+
+header {
+    padding-bottom: 8%;
+}
+
+h1 {
+    text-align: center;
+    color: #F22E76;
+    background-color: #010D26;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+ul li {
+    margin: 10px 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #FFB00B;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+p {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.description, .theForm {
+    margin: 20px auto;
+    width: 80%;
+    padding: 20px;
+    background-color: #023373;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+input[type="text"], input[type="password"], input[type="url"], textarea, select, input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+    background-color: #010D26;
+    color: #ffffff;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 10px;
+}
+
+.checkbox-group, .radio-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.checkbox-group label, .radio-group label {
+    margin-right: 20px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+    background-color: #F22E76;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #118EBF;
+}
+
+hr {
+    border: 1px solid #118EBF;
+}

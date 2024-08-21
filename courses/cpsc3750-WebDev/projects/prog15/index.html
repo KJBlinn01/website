@@ -1,0 +1,63 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: July 27th, 2024
+    Assignment: Prog15 - Integrate with DB
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prog15 - Integrate with DB</title>
+    <script src="../../load-navbar.js" defer></script>
+    <link href="../../navStyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="prog15.css">
+</head>
+<body>
+
+    <!--NavBar Place Holder-->
+    <header>
+        <div id="navbar-placeholder"></div>
+    </header>
+
+    <main>
+
+        <!--Description of the Assignment-->
+        <div class="description">
+            <h1>Prog15 - Integrate with DB</h1>
+            <p> Create a db using PHP and SQL that has these fields in a table called Person: first name, last name, email address.
+                Provide a form for the user to enter a new person record. The user should be able to insert as many persons as they want. 
+                Provide a button that retrieves and displays each person record sorted by last name. 
+            </p>
+        </div>
+
+        <!--Form to Insert New Person-->
+        <h2>Insert New Person</h2>
+        <form id="insertForm">
+            <label for="first_name">First Name:</label><br>
+            <input type="text" id="first_name" name="first_name" required><br>
+            <label for="last_name">Last Name:</label><br>
+            <input type="text" id="last_name" name="last_name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <button type="submit">Insert Record</button>
+        </form>
+    
+        <!--Confirmation Message when Person is Inserted-->
+        <div id="insertMessage" class="result"></div>
+    
+        <!--Search by Last Name-->
+        <h2>Search by Last Name</h2>
+        <form id="searchForm">
+            <label for="search_last_name">Last Name:</label><br>
+            <input type="text" id="search_last_name" name="last_name" required><br><br>
+            <button type="submit">Search</button>
+        </form>
+    
+        <!--Search Results-->
+        <div id="searchResults" class="result"></div>
+
+    </main>
+    <script src="prog15.js" defer></script>
+</body>
+</html>

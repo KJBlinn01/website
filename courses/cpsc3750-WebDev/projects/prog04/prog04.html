@@ -1,0 +1,68 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: June 1st, 2024
+    Assignment: Prog04 - JavaScript Events
+-->
+
+<!DOCTYPE html>
+<head>
+    <title>Prog04 - JavaScript Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="prog04.css">
+    <script src="prog04.js"></script>
+    <link href="/personal-website/navStyle.css" rel="stylesheet" type="text/css">
+    <script src="/personal-website/load-navbar.js" defer></script>
+</head>
+<body>
+    <header>
+        <!-- Navbar Placeholder -->
+        <div  id="navbar-placeholder"></div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main">
+        
+    <!--Nav Bar for the different color buttons-->
+    <nav>
+        <ul>
+            <li><a href="#red">RED</a></li>
+            <li><a href="#green">GREEN</a></li>
+            <li><a href="#blue">BLUE</a></li>
+        </ul>
+    </nav>
+
+    <!-- Red Section -->
+    <section id="red" class="red-button">
+        <button onclick="redFunc()"
+        onmouseover="colorCountRed()"
+        onmouseout="colorCountRed()">RED BUTTON</button>
+        <p id="redCount">RED Times Clicked: 0</p>
+        <p id="redChange">Times RED Changes Colors: 0</p>
+    </section>
+
+    <!-- Green Section -->
+    <section id="green" class="green-button">
+        <button onclick="greenFunc()"
+        onmouseover="colorCountGreen()"
+        onmouseout="colorCountGreen()">GREEN BUTTON</button>
+        <p id="greenCount">GREEN Times Clicked: 0</p>
+        <p id="greenChange">Times GREEN Changes Colors: 0</p>
+    </section>
+
+    <!-- Blue Section -->
+    <section id="blue" class="blue-button">
+        <button onclick="blueFunc()"
+        onmouseover="colorCountBlue()"
+        onmouseout="colorCountBlue()">BLUE BUTTON</button>
+        <p id="blueCount">BLUE Times Clicked: 0</p>
+        <p id="blueChange">Times BLUE Changes Colors: 0</p>
+    </section>
+    
+    </div>
+
+    <!-- JavaScript -->
+    <script src="prog04.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Collection</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script src="../../load-navbar.js" defer></script>
+  <link href="../../navStyle.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!--NavBar-->
+    <header>
+        <div id="navbar-placeholder"></div>
+    </header>
+
+    <main>
+        <!--Project Description-->
+        <div class="description">
+            <h1>Project 3: Collect App Phase 2</h1>
+            <p>Time to complete your collection app by adding a database and making other improvements.
+
+              Create a database that will allow you to support the following features in your Collections App.
+              
+              1. user login - name, email, password, date and time of creation, date and time of last login, number of logins
+              
+              2. favorite items - things the user has in their collection; the concept is as they go thru the items in the collection, from phase 1, allow them to specify if an item is in their favorites. so the database will need to store their userID (could use their userID or create a field in the user table that uniquely identifies each user), a field that shows which item, the date and time it was added.
+              
+              3. provide the user with a list of items in their collection, giving some collection information and date/time it was added. 
+              
+              4. allow user to remove an item from their collection
+              
+              5. provide a master user list that shows all users, their login status (date/time of creation, date/time of last login, number of logins)
+              
+              6. provide a way for a new user to create an account
+              
+            </p>
+        </div>
+
+        <!--Add a container to hold all of the GameSearch Page-->
+        <div class="container">
+            <h1>Create an Account or Login</h1>
+
+            <!-- Registration Form -->
+            <div id="registrationForm" class="form-container">
+                <br><br>
+                <h2>Register</h2>
+              <form id="register" action="insert.php" method="POST">
+                  <input type="text" id="registerName" name="name" placeholder="Name" required>
+                  <input type="email" id="registerEmail" name="email" placeholder="Email" required>
+                  <input type="password" id="registerPassword" name="password" placeholder="Password" required>
+                  <input type="password" id="registerConfirmPassword" placeholder="Confirm Password" required>
+                  <button type="submit">Register</button>
+              </form>
+              <div id="registerMessage" class="message" style="display: none;"></div>
+          </div>
+
+            <br>
+
+            <!-- Reset Password Form -->
+            <form id="resetPasswordForm" action="reset_password.php" method="POST">
+              <h3>Reset Password</h3>
+              <input type="email" name="email" placeholder="Enter your email" required>
+              <input type="password" name="new_password" placeholder="Enter new password" required>
+              <button type="submit">Reset Password</button>
+              <div id="resetPasswordMessage"></div>
+            </form>
+
+            <br><br>
+
+            <!-- Login Form -->
+            <div id="loginForm" class="form-container">
+                <br><br>
+                <h2>Login</h2>
+              <form id="login" action="login.php" method="POST">
+                  <input type="email" id="loginEmail" name="email" placeholder="Email" required>
+                  <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+                  <button type="submit">Login</button>
+              </form>
+              <div id="loginMessage" class="message" style="display: none;"></div>
+          </div>
+
+            <br><hr><br>
+
+            <div id="userCollection" style="display: none;"></div>
+
+            <!--Add the navbar for this assignment-->
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#loginForm">Login</a></li>
+                    <li><a href="#registrationForm">Register</a></li>
+                    <li><a href="#search-container">Game Search</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#stats">Stats</a></li>
+                    <li><a href="#masterUserList">User List</a></li>
+                </ul>
+            </nav>
+
+            <br><hr><br>
+
+            <!--Search Form-->
+            <div id="search-container" class="search-container">
+                <br><br>
+                <h1>Game Collection</h1>
+                <form id="searchForm" class="search-form">
+                    <input type="text" id="searchQuery" placeholder="Enter game name">
+                    <input type="submit" value="Search">
+                </form>
+
+                <!--Place to add the results-->
+                <div id="results" class="results"></div>
+
+                <!--Place to display the game details-->
+                <div id="gameDetails" class="game-details"></div>
+
+                <br><hr><br>
+
+                <!--Add the stats section-->
+                <div id="stats" class="stats">
+                  <br><br>
+                  <h1>RAWG Video Games Database API Stats</h1>
+                  <p>Total number of games: <span id="totalGames">Loading...</span></p>
+                  <p>Most popular game: <span id="mostPopularGame">Loading...</span></p>
+                  <p>Latest released game: <span id="latestReleasedGame">Loading...</span></p>
+                  <p>Highest rated game: <span id="highestRatedGame">Loading...</span></p>
+                </div>
+
+                <br><hr><br>
+
+                <!--About Section-->
+                <div id="about" class="container">
+                    <br><br>
+                    <h1>About RAWG API</h1>
+                    <p>
+                        RAWG is the largest video game database and game discovery service. As a company that believes in sharing and openness, RAWG offers a comprehensive API to access over 500,000 games, along with detailed data, search functionalities, and machine learning recommendations. This API provides an unparalleled resource for developers, researchers, and gaming enthusiasts to build innovative applications and gain insights into the gaming world.
+                    </p>
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li><strong>Extensive Database:</strong> Access a vast library of games, including detailed information such as game titles, release dates, genres, platforms, developer details, and more.</li>
+                        <li><strong>Search and Filtering:</strong> Utilize powerful search and filtering capabilities to find games based on various criteria, such as genre, platform, release date, and popularity.</li>
+                        <li><strong>Game Recommendations:</strong> Leverage machine learning algorithms to receive personalized game recommendations based on user preferences and behavior.</li>
+                        <li><strong>Media and Visuals:</strong> Access screenshots, videos, and other media assets for games to enhance your application or website.</li>
+                        <li><strong>User Ratings and Reviews:</strong> Integrate user ratings and reviews to provide insights and feedback on games from the gaming community.</li>
+                    </ul>
+
+                    <h2>Use Cases</h2>
+                    <p>
+                        The RAWG API can be used in various applications, including:
+                    </p>
+                    <ul>
+                        <li><strong>Game Discovery Platforms:</strong> Create platforms that help users discover new games based on their interests and preferences.</li>
+                        <li><strong>Game Analytics and Research:</strong> Use the extensive game data for research, market analysis, and trend tracking in the gaming industry.</li>
+                        <li><strong>Game Reviews and Ratings:</strong> Build websites or apps that feature game reviews, ratings, and user feedback to guide players in choosing games.</li>
+                        <li><strong>Game Collection Management:</strong> Develop tools for managing and displaying personal game collections, with detailed information and media.</li>
+                    </ul>
+
+                    <h2>Link to the API</h2>
+                    <p>
+                        To learn more about the RAWG Video Games Database API and explore its documentation, visit the official API page:
+                    </p>
+                    <a href="https://rawg.io/apidocs">RAWG Video Games Database API Documentation</a>
+                </div>
+            </div>
+
+            <br><hr><br>
+
+            <!-- Master User List -->
+             <div id="masterUserList" class="container">
+                <br><br>
+                <h1>Master User List</h1>
+                <div id="userList" class="container"></div>
+            </div>
+
+            <!-- Sidebar for game details -->
+            <div id="gameDetailsSidebar" class="sidebar">
+                <!-- Game details will be appended here dynamically -->
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

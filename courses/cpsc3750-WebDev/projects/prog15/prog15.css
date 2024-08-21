@@ -1,0 +1,84 @@
+/*
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: July 27th, 2024
+    Assignment: Prog15 - Integrate with DB
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #010D26;
+    color: #ffffff;
+}
+
+header{
+    padding-bottom: 8%;
+}
+
+.description p {
+    text-align: center;
+    margin: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #F22E76;
+    background-color: #010D26;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+form {
+    margin: 20px auto;
+    width: 80%;
+    padding: 20px;
+    background-color: #023373;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+    background-color: #010D26;
+    color: #ffffff;
+}
+
+button[type="submit"], .back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+    background-color: #F22E76;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+button[type="submit"]:hover, .back-button:hover {
+    background-color: #118EBF;
+}
+
+.result {
+    margin: 20px auto;
+    width: 80%;
+    padding: 20px;
+    background-color: #023373;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+    color: #ffffff;
+}

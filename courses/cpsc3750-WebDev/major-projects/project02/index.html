@@ -1,0 +1,73 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: July 20th, 2024
+    Assignment: Project 02 - Collect App Phase 1
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Collection</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="../../load-navbar.js" defer></script>
+  <link href="../../navStyle.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!--NavBar-->
+    <header>
+        <div id="navbar-placeholder"></div>
+    </header>
+
+    <main>
+        <!--Project Description-->
+        <div class="description">
+            <h1>Project 2: Collect App Phase 1</h1>
+            <p>For this project you will build phase 1 of a collection web application. 
+                An app that allows the user to search through an extensive collection of 
+                something (of your choosing), display stats about the collection, display 
+                search results, etc. As you have learned several required aspects of web 
+                development, with AJAX, you now have enough knowledge to begin planning 
+                your next project. You will build a web app to support collections. 
+                For example, I collect baseball trading cards. 
+                Think about something you enjoy collecting or would like to collect. 
+                Find an API source where you can get information about it. Build an app to 
+                allow you to build your collection. Build an app that allows you to search 
+                for them, in multiple ways and display them in a list format as well as 
+                drill down to a detailed, single item, format.</p>
+        </div>
+
+        <!--Add a container to hold all of the GameSearch Page-->
+        <div class="container">
+
+          <!--The actually game collection-->
+          <h1>Game Collection</h1>
+
+          <!--Add the navbar for this assignment-->
+          <nav>
+            <ul>
+              <li><a href="index.html">Game Search</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="stats.html">Stats</a></li>
+            </ul>
+        </nav>
+
+          <form id="searchForm" class="search-form">
+            <input type="text" id="searchQuery" placeholder="Enter game name">
+            <input type="submit" value="Search">
+          </form>
+
+          <!--Place to add the results-->
+          <div id="results" class="results"></div>
+
+          <!--Place to display the game details-->
+          <div id="gameDetails" class="game-details"></div>
+            
+        </div>
+    </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

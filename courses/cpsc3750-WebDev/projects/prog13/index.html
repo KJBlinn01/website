@@ -1,0 +1,62 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: July 13th, 2024
+    Assignment: Prog13 - AJAX & Handlebars
+-->
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON and AJAX with Handlebars</title>
+  <link href="prog13.css" rel="stylesheet" type="text/css">
+  <script src="../../load-navbar.js" defer></script>
+  <link href="../../navStyle.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!--NavBar-->
+<header>
+    <div id="navbar-placeholder"></div>
+</header>
+
+<main>
+    <!-- Main content for Prog13-->
+    <h1>JSON and AJAX with Handlebars</h1>
+    <button id="fetch-button">Fetch Info for 3 New Animals</button>
+
+    <div id="animal-info"></div>
+
+    <!-- Handlebars template -->
+    <script id="animal-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <p>
+            {{name}} is a {{species}} that likes to eat 
+            {{#each foods.likes}}
+                {{#if @first}}
+                    {{this}}
+                {{else}}
+                and {{this}}
+                {{/if}}
+            {{/each}}
+            and dislikes 
+            {{#each foods.dislikes}}
+                {{#if @first}}
+                    {{this}}
+                {{else}}
+                    and {{this}}
+                {{/if}}
+            {{/each}}.
+        </p>
+        {{/each}}
+    </script>
+</main>
+
+<!--Handlebars Script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script type="text/javascript" src="prog13.js"></script>
+
+</body>
+</html>

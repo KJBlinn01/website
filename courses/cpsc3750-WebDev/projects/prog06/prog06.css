@@ -1,0 +1,36 @@
+/*
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: June 8th, 2024
+    Assignment: Prog06 - Move Buttons
+*/
+
+.main {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    z-index: -1;
+}
+
+.controls {
+    margin: 10px;
+}
+
+.area {
+    width: 75%;
+    height: 75vh;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin: 5px;
+}
+
+#sum {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: black;
+}

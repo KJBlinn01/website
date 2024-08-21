@@ -1,0 +1,1 @@
+I apologize but I'm still debugging the Main NavBar when transferring the files to my website. I understand this is part of the assignment but for the sake of time I'll give you what I have and debug the rest when I finish the other work for this week. 

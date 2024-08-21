@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Collection</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="../../load-navbar.js" defer></script>
+  <link href="../../navStyle.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!--NavBar-->
+    <header>
+        <div id="navbar-placeholder"></div>
+    </header>
+
+    <main>
+        <!--Add the stats section-->
+        <div id="stats" class="stats">
+            <h1>RAWG Video Games Database API Stats</h1>
+
+            <nav>
+                <ul>
+                  <li><a href="index.html">Game Search</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="stats.html">Stats</a></li>
+                </ul>
+            </nav>
+
+            <p>Total number of games: <span id="totalGames">Loading...</span></p>
+            <p>Most popular game: <span id="mostPopularGame">Loading...</span></p>
+            <p>Latest released game: <span id="latestReleasedGame">Loading...</span></p>
+            <p>Highest rated game: <span id="highestRatedGame">Loading...</span></p>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

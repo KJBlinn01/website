@@ -1,0 +1,142 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: June 29th, 2024
+    Assignment: Prog11 - jQuery
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="/personal-website/load-navbar.js" defer></script>
+    <link href="/personal-website/navStyle.css" rel="stylesheet" type="text/css">
+    <link href="prog11.css" rel="stylesheet" type="text/css">
+    <title>Prog11: jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" 
+    type="text/javascript">
+    </script>
+
+    <!-- jQuery UI Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css">
+
+<script>
+$(document).ready(function(){
+  // when the mouse moves over a div, change its background color to yellow
+  $("div").mouseover(function(){
+    $(this).css("background-color", "yellow");
+  });
+
+  // when the mouse leaves a div, change background back to white
+  $("div").mouseleave(function(){
+    $(this).css("background-color", "white");
+  });
+
+  // make the corresponding div fade away when button is pushed
+  $("#div1Fade").click(function(){
+    $("#div1").fadeOut();
+  });
+  $("#div2Fade").click(function(){
+    $("#div2").fadeOut();
+  });
+  $("#div3Fade").click(function(){
+    $("#div3").fadeOut();
+  });
+
+  // add a jQuery datepicker to this page
+  $("#datepicker").datepicker();
+
+  // add a jQuery accordion to this page
+  $("#accordion").accordion();
+
+  // add a jQuery progressbar to this page
+  $("#progressbar").progressbar({
+    value: 0
+  });
+  // update the progress bar every second for 20 seconds
+  function updateProgress() {
+    var value = $("#progressbar").progressbar("value");
+    $("#progressbar").progressbar("value", value + 5);
+    if (value < 100) {
+      setTimeout(updateProgress, 1000);
+    }
+  }
+  setTimeout(updateProgress, 1000);
+});
+</script>
+</head>
+<body>
+    <!--NaveBar Placeholder-->
+    <header>
+        <div id="navbar-placeholder"></div>
+    </header>
+
+    <!--Main Content-->
+
+    <h1>Welcome to My Prog11: jQuery</h1>
+
+    <div id="div1">
+        <p>Move the Mouse over me to change my background color to Yellow.</p>
+        <p>To change me back to White, move the mouse of of me.</p>
+        <p>Press the Fade Out Div 1 button to fade me out!!</p>
+    </div>
+    <br>
+
+    <div id="div2">
+        <p>Move the Mouse over me to change my background color to Yellow.</p>
+        <p>To change me back to White, move the mouse of of me.</p>
+        <p>Press the Fade Out Div 2 button to fade me out!!</p>
+    </div>
+    <br>
+
+    <div id="div3">
+        <p>Move the Mouse over me to change my background color to Yellow.</p>
+        <p>To change me back to White, move the mouse of of me.</p>
+        <p>Press the Fade Out Div 3 button to fade me out!!</p>
+    </div>
+
+    <!--Button to fade out div1-->
+    <button id="div1Fade">Fade Out Div 1</button>
+
+    <!--Button to fade out div2-->
+    <button id="div2Fade">Fade Out Div 2</button>
+
+    <!--Button to fade out div3-->
+    <button id="div3Fade">Fade Out Div 3</button>
+
+    <br><hr>
+
+    <!--Datepicker-->
+    <br>
+    <h2>Choose a Date</h2>
+    <p>Date: <input type="text" id="datepicker"></p>
+    <br><hr>
+
+    <!--Accordion-->
+    <br>
+    <h2>Accordion</h2>
+    <div id="accordion">
+        <h3>Section 1</h3>
+        <div>
+            <p>This will show the content for Section 1</p>
+        </div>
+        <h3>Section 2</h3>
+        <div>
+            <p>This will show the content for Section 2</p>
+        </div>
+        <h3>Section 3</h3>
+        <div>
+            <p>This will show the content for Section 3</p>
+        </div>
+    </div>
+    <br><hr>
+
+    <!--Progress Bar-->
+    <br>
+    <h2>Progress Bar</h2>
+    <div id="progressbar"></div>
+    <br>
+
+</body>
+</html>

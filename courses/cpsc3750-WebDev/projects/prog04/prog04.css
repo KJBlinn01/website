@@ -1,0 +1,150 @@
+/*
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: June 1st, 2024
+    Assignment: Prog04 - JavaScript Events
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.main {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    z-index: -1;
+}
+
+.main nav {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.main nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.main nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the different sections */
+section {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+/* Styling for the buttons */
+button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+  
+/* Styling for the different button colors */
+.red-button {
+    color: black;
+    border: 2px solid;
+    background-color: red;
+}
+
+.green-button {
+    color: black;
+    border: 2px solid;
+    background-color: green;
+}
+
+.blue-button {
+    color: black;
+    border: 2px solid;
+    background-color: blue;
+}
+
+/* Hover effect for the buttons */
+.red-button button:hover {
+    background-color: white;
+    color: black;
+}
+
+.green-button button:hover {
+    background-color: white;
+    color: black;
+}
+
+.blue-button button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Responsive for tables and phones */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    button {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 5px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    section {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+

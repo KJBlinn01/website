@@ -1,0 +1,53 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: June 8th, 2024
+    Assignment: Prog06 - Moving Buttons
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Button Move</title>
+        <link rel="stylesheet" href="prog06.css">
+        <script src="ButtonMove.js"></script>
+        <link href="/personal-website/navStyle.css" rel="stylesheet" type="text/css">
+        <script src="/personal-website/load-navbar.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <!-- Navbar Placeholder -->
+            <div  id="navbar-placeholder"></div>
+        </header>
+        
+        <div class = "main">
+            <div class="controls">
+                <h1>Prog06: Move Buttons</h1>
+    
+                <!-- Color Select -->
+                <select id="selectColor">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="white">White</option>
+                </select>
+    
+                <!-- Make Button -->
+                <button id="make">Make Button</button>
+    
+                <!-- Move Button -->
+                <button id="move">MOVE</button>
+    
+                <!-- Running Sum -->
+                <h2 id="sum">Running Sum: 0</h2>
+            </div>
+    
+            <!-- Viewing Area -->
+            <div class="area" id="area"></div> 
+        </div>
+        
+        <script src="prog06.js"></script>
+    </body>
+</html>

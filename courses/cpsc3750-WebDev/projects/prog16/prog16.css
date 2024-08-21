@@ -1,0 +1,78 @@
+/*
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: July 27th, 2024
+    Assignment: Prog16 - Usability Testing
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #010D26;
+    color: #ffffff;
+    text-align: center;
+}
+
+header {
+    padding-bottom: 8%;
+}
+
+h1 {
+    text-align: center;
+    color: #F22E76;
+    background-color: #010D26;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+    color: #FFB00B;
+    background-color: #010D26;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+main p {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #023373;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+    list-style: none;
+    color: #ffffff;
+}
+
+main ol {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #023373;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+    list-style: none;
+    color: #ffffff;
+}
+
+main ol li {
+    padding: 10px;
+}
+
+main a {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+    background-color: #F22E76;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #118EBF;
+}

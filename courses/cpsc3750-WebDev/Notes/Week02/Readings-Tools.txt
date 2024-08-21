@@ -1,0 +1,22 @@
+Readings:
+    SAMS Chapter 02: Structuring HTML & Using Cascading Style Sheets
+    SAMS Chapter 03: CSS Box Model & Positioning
+    DMMT Chapter 01
+
+Tools / Videos:
+    W3Schools HTML Tutorial 
+        https://www.w3schools.com/html/default.asp
+    W3Schools CSS Tutorial 
+        https://www.w3schools.com/html/html_css.asp
+
+    HTML Tutorial for Beginners - 00 - Introduction to HTML
+        https://www.youtube.com/watch?v=dD2EISBDjWM&list=PLr6-GrHUlVf_ZNmuQSXdS197Oyr1L9sPB&index=2
+
+    CSS Tutorial for Beginners - 01 - Introduction to CSS
+        https://www.youtube.com/watch?v=qKoajPPWpmo&list=PLr6-GrHUlVf8JIgLcu3sHigvQjTw_aC9C&index=2
+    
+    CSS Tutorial for Beginners - 17 - CSS Box Model Part 1
+       https://www.youtube.com/watch?v=3n9UbOvMZ30&list=PLr6-GrHUlVf8JIgLcu3sHigvQjTw_aC9C&index=18
+ 
+      
+

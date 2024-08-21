@@ -1,0 +1,74 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: July 13th, 2024
+    Assignment: Project 01 - Audio Changer
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project01: Audio Changer</title>
+    <link rel="stylesheet" href="project01.css">
+    <script src="../../load-navbar.js" defer></script>
+    <link href="../../navStyle.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!--NavBar-->
+    <header>
+        <div id="navbar-placeholder"></div>
+    </header>
+    
+    <main>
+        <h1>Rick Astley | Never Gonna Give You Up For 10 minutes</h1>
+        <br>
+
+        <!--Display the Runtime-->
+        <h2>Time listening to the greatest song ever created: <span id="current-time">0:00</span></h2>
+        <br>
+
+        <!--The Audio File-->
+        <audio id="audio" controls>
+            <source src="audio.mp3" type="audio/mpeg">
+        </audio>
+
+        <!--Control Buttons-->
+        <div id="controls">
+            <button id="play-pause">Play/Pause</button>
+            <button id="rewind">Rewind 5s</button>
+            <button id="forward">Forward 5s</button>
+        </div>
+
+        <br><hr><br>
+
+        <!--Add a place for the titles list-->
+        <h3>TimeStamps:</h3>
+        <div id="playlist"></div>
+        <br>
+        
+        <!--Add buttons to Add/Remove Titles-->
+        <div id="manage-titles">
+            <button id="add-title">Add Title</button>
+            <button id="remove-title">Remove Title</button>
+        </div>
+
+        <!--Project Description-->
+        <br><hr><br>
+        <h1>Project01: Audio Changer</h1>
+        <p>Next build an app with the following features:</p>
+        <ul>
+            <li>-display the file name of the audio file</li>
+            <li>-display the list of titles (buttons are nice, but use whatever DOM object you think looks best); this is like the playlist</li>
+            <li>-when user selects a title, play just that segment</li>
+            <li>-a button to rewind 5 seconds</li>
+            <li>-a button to forward 5 seconds</li>
+            <li>-a button to pause/play - this should be a single button that toggles between pause and play</li>
+            <li>-display the current time of the audio file</li>
+            <li>-your app should support up to 50 titles (minimum of 6)</li>
+        </ul>
+
+    </main>
+    <script src="project01.js"></script>
+</body>
+</html>

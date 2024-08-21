@@ -1,0 +1,98 @@
+body {
+  margin:0;
+  padding:0;
+  min-width: 525px;
+}
+
+header {
+  float: left;
+  width: 100%;
+}
+
+/* Made some changes to the footer to make it more interesting */
+footer {
+  position:relative;
+  float: left;
+  width: 100%;
+  text-align:center;
+  font-style: italic;
+  text-align: center;
+  background-color: #522D80; 
+  color: #FFFFFF;
+  padding: 3px;
+}
+
+#wrapper {
+  float: left;
+  padding-left: 200px;
+  padding-right: 125px;
+  overflow: hidden;
+}
+
+#left_side {
+  position: relative;
+  float: left;
+  width: 200px;
+  background-color: #F56600; /* Changed color to Clemson Orange */
+  right: 215px; /* Space in between left side and content area */
+  margin-left: -100%;
+  margin-bottom: -2000px;
+  padding-bottom: 2000px;
+
+}
+
+#right_side {
+  color : #FFFFFF; /* Changed color for readability */
+  position: relative;
+  float: right; /* Changed to float right */
+  width: 125px;
+  background-color: #522D80; /* Changed color to Clemson Purple */
+  margin-right: -125px;
+  margin-bottom: -2000px;
+  padding-bottom: 2000px;
+  right: -15px; /* Space in between right side and content area */
+}
+
+#content_area {
+  position: relative;
+  float: left;
+  background-color: #ffffff;
+  width: 100%;
+  margin-bottom: -2000px;
+  padding-bottom: 2000px;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Added padding to the right column text */
+p {
+  margin: 0;
+  padding: 15px;
+}
+
+#left_side ul {
+  list-style: none;
+  margin: 12px 0px 0px 12px;
+  padding: 0px;
+}
+
+#left_side li a:link, #nav li a:visited {
+  font-size: 12pt;
+  font-weight: bold;
+  padding: 3px 0px 3px 3px;
+  color : #FFFFFF; /* Changed color for readability */
+  text-decoration: none;
+  display: block;
+}
+
+#left_side li a:hover, #nav li a:active {
+  font-size: 12pt; 
+  font-weight: bold;
+  padding: 3px 0px 3px 3px;
+  color: #522D80; /* Changed color to Clemson Purple */
+  text-decoration: none;
+  display: block;
+}
+

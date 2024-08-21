@@ -1,0 +1,338 @@
+/*
+  Name: Kevin Blinn
+  Class: CPSC 3750
+  Date Due: July 20th, 2024
+  Assignment: Project 02 - Collect App Phase 1
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #010D26;
+    color: #ffffff;
+}
+
+header {
+    padding-bottom: 12%;
+}
+
+p {
+    text-align: center;
+    margin: 20px;
+}
+
+main nav {
+    background-color: #023373;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+main nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+main nav li {
+    float: left;
+}
+  
+main nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+  
+main nav li a:hover {
+    background-color: #118EBF;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #023373;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 100px;
+}
+
+h1 {
+    text-align: center;
+    color: #F22E76;
+    background-color: #010D26;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+    color: #FFB00B;
+    background-color: #010D26;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.search-form {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    font-size: 16px;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+    background-color: #010D26;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.search-form input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+    background-color: #F22E76;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.search-form input[type="submit"]:hover {
+    background-color: #118EBF;
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.game-card {
+    border: 2px solid #118EBF;
+    padding: 10px;
+    width: 200px;
+    background-color: #010D26;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 5px;
+    color: #ffffff;
+    position: relative;
+}
+
+.game-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.game-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #FFB00B;
+}
+
+.game-card p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.game-card button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #F22E76;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #118EBF;
+    cursor: pointer;
+}
+
+.game-card button:hover {
+    background-color: #118EBF;
+}
+
+.game-details-sidebar {
+    position: fixed;
+    top: 100px;
+    right: -400px;
+    width: 400px;
+    height: calc(100% - 100px);
+    background-color: #023373;
+    border-left: 2px solid #118EBF;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.game-details-sidebar.active {
+    right: 0;
+}
+
+.game-details-sidebar img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.game-details-sidebar h2, .game-details-sidebar p {
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.game-details-sidebar button {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #F22E76;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #118EBF;
+    cursor: pointer;
+    width: calc(50% - 10px);
+    text-align: center;
+}
+
+.game-details-sidebar button:hover {
+    background-color: #118EBF;
+}
+
+.container a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #118EBF;
+    border-radius: 5px;
+    background-color: #F22E76;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+}
+  
+.container a:hover {
+    background-color: #118EBF;
+}
+
+.form-container {
+    background-color: #010D26;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container input[type="text"], 
+.form-container input[type="email"], 
+.form-container input[type="password"] {
+    padding: 10px;
+    width: 80%;
+    margin: 10px 0;
+    border: 1px solid #118EBF;
+    border-radius: 5px;
+    background-color: #023373;
+    color: #ffffff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-container button {
+    display: block;
+    width: 50%;
+    margin: 10px auto 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F22E76;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #118EBF;
+}
+
+.form-container button:hover {
+    background-color: #118EBF;
+}
+
+/* Add CSS for the sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #023373;
+    color: white;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    display: none;
+}
+
+.sidebar.active {
+    display: block;
+}
+
+.sidebar .close-details {
+    background-color: #F22E76;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.sidebar .add-favorites {
+    background-color: #F22E76;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#message {
+    display: none;
+    margin-top: 10px;
+}
+
+#message.success {
+    color: green;
+}
+
+#message.error {
+    color: red;
+}
+
+#userList .user-item {
+    background-color: #010D26;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}

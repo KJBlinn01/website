@@ -1,0 +1,53 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: July 6th, 2024
+    Assignment: Group05 - Hangman
+    Grade Version: B
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="../../load-navbar.js" defer></script>
+<link href="../../navStyle.css" rel="stylesheet" type="text/css">
+<title>Hangman Game</title>
+<link rel="stylesheet" href="group05.css">
+</head>
+<body>
+<header>
+    <div id="navbar-placeholder"></div>
+</header>
+
+<main>
+    <h1>Hangman Game</h1>
+
+    <!--Grade Tier D: List Names and Cheat Mode -->
+    <h4>Hangman App was developed by Kevin Blinn</h4>
+    <p>
+        Cheat Mode:
+        <input type="checkbox" id="cheatMode" onclick="cheatMode()">
+    </p>
+    <p id="displayWord" style="display:none">The word is </p>
+
+    <button onclick="startGame()">Start New Game</button>
+
+    <hr>
+
+    <!--Added Guess so the user can see what they already guessed-->
+    <div id="guesses"></div>
+    <div id="attemptsLeft"></div>
+    <div id="status"></div>
+
+    <!--The word that is being guessed-->
+    <div id="wordToGuess"></div>
+
+    <!--Grade Tier C: Add Letters to a 5x6 Grid -->
+    <div id="letterGrid"></div>
+    
+</main>
+<script src="group05.js"></script>
+</body>
+</html>

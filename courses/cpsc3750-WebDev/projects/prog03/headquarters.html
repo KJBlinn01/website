@@ -1,0 +1,89 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: May 25th, 2024
+    Assignment: Prog03 - Demo HTML & CSS
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="/personal-website/navStyle.css" rel="stylesheet" type="text/css">
+    <script src="/personal-website/load-navbar.js" defer></script>
+    <title>Headquarters</title>
+</head>
+<body>
+    <header>
+        <!-- Navbar Placeholder -->
+        <div id="navbar-placeholder"></div>
+    </header>
+    
+    <main>
+        <section>
+            <div class="headquarters-welcome">
+                <h1>Welcome to The Headquarters</h1>
+                <h3>Step inside Kevin's mind and explore some of his hobbies by 
+                    visiting the different island. </h3>
+            </div>
+        
+
+            <!-- What are Islands of Personality-->
+            <div class="description">
+                <h2>What are the Islands of Personality?</h2>
+                <p>I took inspiration from the Disney movie "Inside Out" to 
+                    display my hobbies like the Islands of Personality in the 
+                    movie. I thought this would be a fun way to display my
+                    hobbies and interests while also demonstrating my skills 
+                    that I have learned this week. I hope you enjoy exploring
+                    the islands! 
+                </p>
+    
+                <h4>Linked below is a video explaining the islands in the movie:</h4>
+                <!-- SRC CODE:  https://www.w3schools.com/html/html_youtube.asp-->
+                <div class="video-container">
+                    <iframe width="800" height="450" 
+                    src="https://www.youtube.com/embed/AXGhfYVAOKE" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; 
+                    encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Explore the Islands -->
+            <div class="explore-the-islands">
+                <h2>Explore the Islands</h2>
+
+                <!-- Images were created by ChatGPT-->
+                <div class="image-nav-container">
+                    <div class="image-item">
+                        <img src="images/video-game-island.webp" alt="Video Game Island">
+                        <a href="video-game-island.html">Video Game Island</a>
+                    </div>
+                    <div class="image-item">
+                        <img src="images/disney-island.webp" alt="Disney Island">
+                        <a href="disney-island.html">Disney Island</a>
+                    </div>
+                    <div class="image-item">
+                        <img src="images/horror-island.webp" alt="Horror Island">
+                        <a href="horror-island.html">Horror Island</a>
+                    </div>
+                </div>
+                
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>Author: Kevin Blinn</p>
+        <p>&copy; 2024 </p>
+        <p><a href="mailto:kblinn@g.clemson.edu">kblinn@g.clemson.edu</p>
+    </footer>
+</body>
+</html>

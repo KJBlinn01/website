@@ -1,0 +1,21 @@
+/*
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: June 29th, 2024
+    Assignment: Prog10 - Key Press
+*/
+
+/* Header styles */
+header {
+    padding-bottom: 8%;
+}
+
+.main {
+    text-align: center;
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 5px;
+}

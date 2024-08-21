@@ -1,0 +1,196 @@
+/*
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: May 25th, 2024
+    Assignment: Prog03 - Demo HTML & CSS
+*/
+/*
+    Color Palette:
+    #173673 - Dark Blue
+    #8FAFD9 - Light Blue
+    #055BA6 - Darker Blue
+    #F2D64B - Yellow
+    #D91E1E - Red
+*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.main nav ul {
+    list-style-type: none;
+    padding: 20px 0;
+    background-color: #173673;
+    text-align: center;
+}
+
+.main nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.main nav ul li a {
+    color: #F2D64B;
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #055BA6;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.main {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    z-index: -1;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer{
+    margin: 0;
+    background-color: #D91E1E;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Description Section */
+.description {
+    background-image: url('https://virtualbackgrounds.site/wp-content/uploads/2020/09/inside-out-rileys-headquarters.jpeg');
+    padding: 20px;
+    border-radius: 5px;
+}
+.description h2 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+}
+.description p {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+.description h4 {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Main Navigation Bar */
+.nav_bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0D1D26;
+}
+  
+.nav_bar li {
+    float: left;
+}
+  
+.nav_bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+  
+.nav_bar li a:hover {
+    background-color: #2F4D59;
+}
+
+.active {
+    background-color: #2F4D59;
+}
+
+/* Video Container */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    max-width: 800px;
+    height: 400px;
+}
+
+/* Image Row */
+.image-nav-container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    margin: 20px 0;
+}
+
+.image-item {
+    text-align: center;
+}
+
+.image-item img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #000000; 
+}
+
+.image-item a {
+    display: block;
+    margin-top: 40px; /* Space between image and button */
+    padding: 10px 20px;
+    background-color: #004080;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.image-item a:hover {
+    background-color: #003366; 
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-item {
+    width: 65%; /* Adjust the width as needed */
+    height: auto;
+}
+
+/* Favorites Section */
+.favorites-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+
+.favorite-item {
+    width: 50%; 
+    margin-bottom: 20px;
+}
+
+.favorite-item img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #000000;
+}
+
+.favorite-item h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.favorite-item p {
+    text-align: center;
+    margin: 0;
+}

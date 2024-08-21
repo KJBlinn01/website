@@ -1,0 +1,44 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: July 13th, 2024
+    Assignment: Prog14 - PHP File I/O App
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Checker</title>
+    <script src="../../load-navbar.js" defer></script>
+    <link href="../../navStyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="prog14.css">
+</head>
+<body>
+    <header>
+        <!--Nav Bar-->
+        <div id="navbar-placeholder"></div>
+    </header>
+
+    <main>
+        <h1>Number Checker</h1>
+
+        <!--A form that has the user input numbers then gets processed by a private php-->
+        <form method="post" action="../private/process.php">
+            <label for="numbers">Enter numbers, separated by a comma, then hit check numbers (Make sure you have something in the textbox before you hit Reset):</label>
+            <input type="text" id="numbers" name="numbers" required>
+            <button type="submit" name="check">CHECK THESE NUMBERS</button>
+            <button type="submit" name="reset">RESET</button>
+        </form>
+
+        <!--Buttons that will display the numbers that are Armstrong, Fibonacci, Prime, or None-->
+        <form method="get" action="../private/process.php">
+            <button type="submit" name="view" value="armstrong">ARMSTRONG</button>
+            <button type="submit" name="view" value="fibonacci">FIBONACCI</button>
+            <button type="submit" name="view" value="prime">PRIME</button>
+            <button type="submit" name="view" value="none">NONE</button>
+        </form>
+    </main>
+</body>
+</html>
+

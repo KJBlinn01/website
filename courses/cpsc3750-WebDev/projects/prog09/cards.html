@@ -1,0 +1,50 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: June 15th, 2024
+    Assignment: Prog09 - Card Object
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="cards.js" > </script>
+    <script src="/personal-website/load-navbar.js" defer></script>
+    <link href="/personal-website/navStyle.css" rel="stylesheet" type="text/css">
+    <link href="prog09.css" rel="stylesheet" type="text/css">
+    <title>JavaScript Business Cards</title>
+  </head>
+  <body>
+    <header>
+      <!-- Navbar Placeholder -->
+      <div  id="navbar-placeholder"></div>
+    </header>
+
+    <!-- Main Content -->
+    <div class = "main">
+      <!--Get the information from the user-->
+      <h2>Information Form</h2>
+      <form id="theform">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" required><br>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" required><br>
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" required><br>
+        <button type="button" onclick="addCard()">Submit</button>
+    </form>
+    
+    <hr>
+
+    <!--Display All Cards-->
+    <h2>Business Cards</h2>
+    <button onclick="displayCards()">Display Cards</button>
+    <div id="cards"></div>
+</body>
+</html>
+

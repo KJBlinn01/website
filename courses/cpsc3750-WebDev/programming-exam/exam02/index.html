@@ -1,0 +1,76 @@
+<!--
+    Name: Kevin Blinn
+    Class: CPSC 3750
+    Date Due: July 20th, 2024
+    Assignment: Programming Exam #2
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../navStyle.css">
+    <script src="../../load-navbar.js" defer></script>
+    <title>Exam #2</title>
+    <link rel="stylesheet" href="exam02.css">
+</head>
+<body>
+<header>
+    <!--NavBar-->
+    <div id="navbar-placeholder"></div>
+</header>
+
+<main>
+    <!--Description of the Exam-->
+    <div class="description">
+        <h1>Programming Exam #2</h1>
+        <p>
+            Given a word.txt file, determine how many vowels (A,E,I,O,U) are in
+            each word and associate each word with the number of vowels.
+            After finding the amount of vowels in each word, display buttons
+            for the user to select how many vowels they want to see in the words.
+            Whenever the user presses one of these buttons, display all of the 
+            words that have that many vowels in a scrollable list. The user can
+            then drag and drop the words they want to keep into a drop area.
+        </p>
+        <h2>REQUIREMENTS FOR A:</h2>
+        <ul>
+            <li>The scrollable list should be sorted in word length order from shortest word to longest word.</li>
+            <li>Display the words and allow the user to drag a word from the list and drop it in an area of your choosing.</li>
+        </ul>
+    </div>
+
+    <br><hr><br>
+
+    <!--Exam Code-->
+    <div class="assignment">
+        <h1>Vowel Counter</h1>
+        <p>
+            Press a button to display all of the words that have the selected amount of vowels.
+            If you want to keep a word, drag it into the drop area below.
+        </p>
+
+        <!--Display the Vowel Buttons for the User-->
+        <div id="buttonsContainer"></div>
+
+        <!--Display the Words with the correct amount of vowels that the user selected-->
+        <div id="wordsContainer" class="scrollable-list"></div>
+
+        <!--Display the Word Count of the Scrollable List-->
+        <div id="wordCountList">Words in Scrollable List: 0</div>
+
+        <h2>Drag You Words in the Area Below:</h2>
+
+        <!--Give a Drop Area for the words the user wants to drag and drop-->
+        <div id="dropArea" class="drop-area" ondrop="dropWord(event)" ondragover="allowDrop(event)"></div>
+
+        <!--Display the Word Count of the words in the drop area-->
+        <div id="wordCount">Words in Drop Area: 0</div>
+    </div>
+
+</main>
+
+<script src="exam02.js"></script>
+</body>
+</html>
+
