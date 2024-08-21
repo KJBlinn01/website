@@ -1,60 +1,104 @@
+<!--
+    Name: Kevin Blinn
+    Date Created: 06/07/2024
+    Website Name: Disney College Program Application
+    Description: A website that showcases my skills, experience, and passions 
+                 for the Disney College Program.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disney Experience - Kevin Blinn</title>
-    <link rel="stylesheet" href="./disneyStyle.css">
-    <script src="../load-navbar.js" defer></script>
-    <script rel="stylesheet" href="../navStyle.css"></script>
+    <title>Disney College Program Application</title>
+    <link rel="stylesheet" href="disneyStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <!-- Navbar Placeholder -->
-        <div id="navbar-placeholder"></div>
-    </header>
+    <div class="sidebar">
+        <img src="images/home-logo.webp" alt="Page Logo">
+        <h2>Kevin Blinn</h2>
+        <h3>Disney College Program Applicant</h3>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#relevant-work-experience">Relevant Work Experience</a></li>
+            <li><a href="#interested-in-dcp">Interested in the DCP</a></li>
+            <li><a href="#attractions-role">Attractions Role</a></li>
+            <li><a href="#attractions-of-interest">Attractions of Interest</a></li>
+            <li><a href="#future-development">Future Development</a></li>
+            <li><a href="https://kjblinn.com">Visit My Website</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <!-- Welcome Section -->
+         <section id="welcome">
+            <h2>Welcome, Recruiter!</h2>
+            <p>Quick Notes:</p>
+            <ul>
+                <li><i class="fas fa-death-star bullet-icon"></i> <span class="highlight">Kevin Blinn</span> - Applicant for Disney College Program</li>
+                <li><i class="fas fa-death-star bullet-icon"></i> Aspiring to join <span class="highlight">Rise of the Resistance</span> as a Lieutenant</li>
+                <li><i class="fas fa-death-star bullet-icon"></i> Passionate about <span class="highlight">Disney</span> and <span class="highlight">technology</span></li>
+                <li><i class="fas fa-death-star bullet-icon"></i> Combining <span class="highlight">storytelling</span> with technical skills</li>
+                <li><i class="fas fa-death-star bullet-icon"></i> Ready to contribute to the <span class="highlight">First Order</span> experience</li>
+            </ul>
+         </section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to Kevin's Disney Experience</h1>
-        <p>Exploring the magic of Disney through technology</p>
-    </section>
+        <!-- Introduction Section -->
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Welcome to my application page for the Disney College Program for
+                 Spring 2025. I am excited to showcase my background, 
+                 experiences, and interests to enhance my chances of being 
+                 selected for this amazing opportunity.</p>
+            <img src="images/star-wars-01.JPG" alt="Star Wars 1">
+        </section>  
 
-    <!-- Interactive Gallery -->
-    <section class="gallery">
-        <h2>My Work</h2>
-        <div class="gallery-grid">
-            <!-- Add project thumbnails with hover effects -->
-            <div class="gallery-item">
-                <img src="path/to/project-image1.jpg" alt="Project 1">
-                <div class="gallery-overlay">
-                    <p>Project 1 Description</p>
-                </div>
-            </div>
-            <!-- Add more items as needed -->
-        </div>
-    </section>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>Hello! My name is Kevin Blinn, and I am a dedicated Computer 
+                Science student at Clemson University, set to graduate in
+                 December 2024. My passion for Disney runs deep, inspiring my 
+                 dream to one day become an Imagineer. The creativity and 
+                 innovation embodied by Disney resonate with my own aspirations 
+                 and drive to blend technology with storytelling. I am eager to 
+                 bring my skills and enthusiasm to the Disney College Program, 
+                 contributing to the magic that has captivated me for so long 
+                 while gaining invaluable experience in the field I love.</p>
+        </section>
+        <section id="resume">
+            <h2>Resume</h2>
+            <p>Download my resume <a href="path/to/resume.pdf" target="_blank">here</a>.</p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <p>Details about my educational background, including the schools I have attended and the degrees I have earned.</p>
+        </section>
+        <section id="relevant-work-experience">
+            <h2>Relevant Work Experience</h2>
+            <p>An overview of my work experience that is relevant to the Disney College Program and how it has prepared me for this opportunity.</p>
+        </section>
+        <section id="interested-in-dcp">
+            <h2>Interested in the DCP</h2>
+            <p>Reasons why I am particularly interested in the Disney College Program and what I hope to gain from this experience.</p>
+        </section>
+        <section id="attractions-role">
+            <h2>Attractions Role</h2>
+            <p>Information about the role I am applying for within the Disney College Program and why I believe I am a good fit for this role.</p>
+        </section>
+        <section id="attractions-of-interest">
+            <h2>Attractions of Interest</h2>
+            <p>A list of attractions that I am particularly interested in working at and why these attractions appeal to me.</p>
+        </section>
+        <section id="future-development">
+            <h2>Future Development</h2>
+            <p>My plans for future personal and professional development, and how the Disney College Program fits into these plans.</p>
+        </section>
+    </div>
 
-    <!-- Skills Highlight -->
-    <section class="skills">
-        <h2>Skills & Technologies</h2>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <img src="path/to/html5-icon.png" alt="HTML5">
-                <p>HTML5</p>
-            </div>
-            <!-- Add more skill items -->
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="cta">
-        <h2>Let's Create Magic Together!</h2>
-        <a href="https://kjblinn.com/contact.html" class="cta-button">Contact Me</a>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Kevin Blinn. All rights reserved.</p>
-    </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>

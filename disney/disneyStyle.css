@@ -1,126 +1,274 @@
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F4F4F9;
-    color: #333333;
+    display: flex;
+    background-color: #18191B; /* Dark primary background */
+    color: #F5F3F4; /* White Smoke text */
 }
 
-header .wrapper {
-    background: #4A90E2;
+h2 {
+    color: #FD0000; /* Red for section headers */
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Makes the header text uppercase */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adds a subtle text shadow */
+}
+
+p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    color: #F5F3F4; /* White text */
+    margin-bottom: 25px;
+    font-weight: 300; /* Makes the text lighter */
+    text-align: justify; /* Justifies the text */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 280px; /* Increased width for better readability */
+    background-color: #0E0E0E; /* Black sidebar */
+    color: #F5F3F4; /* White text */
+    height: 100vh;
     position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+    overflow-y: auto; /* Smooth scrolling instead of default scrollbar */
+    padding-top: 20px; /* Add padding to give space above content */
+    scrollbar-width: thin; /* Make scrollbar thinner */
+    scrollbar-color: #FD0000 #0E0E0E; /* Style scrollbar to match theme */
 }
 
-.hero {
-    background: url('path/to/disney-hero.jpg') no-repeat center center/cover;
-    color: #fff;
+.sidebar h2, .sidebar h3 {
     text-align: center;
-    padding: 100px 20px;
+    margin: 0;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #444;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adds a subtle text shadow */
 }
 
-.hero h1 {
-    font-size: 48px;
+.sidebar h2 {
+    font-size: 1.8em; /* Slightly larger for emphasis */
+    font-weight: bold;
+    margin-bottom: 0.2em;
+}
+
+.sidebar h3 {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #FD0000; /* Red color to connect with the theme */
+    margin-top: 0.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar img {
+    display: block;
+    margin: 10px auto 20px auto;
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    border: 3px solid #FD0000; /* Red border around the image */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adds a shadow to the image */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: #F5F3F4;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 10px 0;
+}
+
+.sidebar ul li a:hover {
+    background-color: #FD0000; /* Red on hover */
+}
+
+/* Custom Scrollbar */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #0E0E0E; /* Background of the scrollbar track */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #FD0000; /* Scrollbar color */
+    border-radius: 10px; /* Rounded scrollbar */
+}
+
+/* Content Area */
+.content {
+    margin-left: 280px; /* Adjusted margin to match new sidebar width */
+    padding: 30px;
+    flex: 1;
+    background-color: #272527; /* Light gray secondary background */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: #333; /* Slightly darker background for sections */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7); /* Adds a shadow to sections */
+}
+
+section h2 {
     margin-bottom: 20px;
 }
 
-.hero p {
-    font-size: 24px;
+section p {
+    margin-bottom: 20px;
 }
 
-.gallery-grid, .skills-grid, .tech-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 40px 20px;
-}
-
-.gallery-item, .skill-item, .tech-item {
-    flex-basis: 30%;
-    margin: 10px;
-    position: relative;
-}
-
-.gallery-item img, .skill-item img, .tech-item img {
+section img {
+    display: block;
+    margin: 20px auto;
     width: 100%;
-    border-radius: 8px;
+    max-width: 1500px;
+    height: auto;
+    border: 3px solid #FD0000; /* Red border for images */
+    border-radius: 10px; /* Rounds the corners of the images */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7); /* Adds a shadow to images */
 }
 
-.gallery-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    opacity: 0;
-    transition: opacity 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Welcome Section */
+#welcome {
+    background-color: #272527; /* Matches the rest of the content */
+    padding: 30px;
+    border-radius: 10px;
     text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
 }
 
-.gallery-item:hover .gallery-overlay {
-    opacity: 1;
+#welcome h2 {
+    color: #FD0000; /* Red for section headers */
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Makes the header text uppercase */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adds a subtle text shadow */
 }
 
-.cta {
-    text-align: center;
-    padding: 60px 20px;
-    background: #FF6F61;
-    color: #fff;
+#welcome p {
+    font-size: 1.5em;
+    line-height: 1.8;
+    color: #F5F3F4; /* White text */
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.cta-button {
-    background: #FFA726;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 18px;
+#welcome ul {
+    font-size: 1.3em;
+    line-height: 2;
+    color: #F5F3F4; /* White text */
+    text-align: left;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
-.cta-button:hover {
-    background: #FF6F61;
+#welcome ul li {
+    margin-bottom: 10px;
 }
 
-.contact-form {
-    background: #333333;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
+#welcome img {
+    width: 80%;
+    max-width: 1200px;
+    height: auto;
+    border: 3px solid #FD0000; /* Slightly thicker border */
+    margin-top: 30px;
+    border-radius: 10px; /* Rounds the corners of the image */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7); /* Adds a shadow to the image */
 }
 
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
+.bullet-icon {
+    margin-right: 10px;
+    color: #FD0000; /* Red color to match theme */
 }
 
-.contact-form button {
-    background: #FFA726;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
+.highlight {
+    color: #FD0000; /* Red to emphasize key points */
+    font-weight: bold;
+}
+
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Sidebar becomes full-width */
+        height: auto; /* Adjust height */
+        position: relative; /* No longer fixed */
+        padding-top: 10px;
+    }
+
+    .sidebar h2, .sidebar h3, .sidebar ul li {
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .sidebar img {
+        margin: 10px auto 20px 20px;
+    }
+
+    .content {
+        margin-left: 0; /* No margin since sidebar is not fixed */
+        padding: 20px;
+    }
+
+    /* Collapse sidebar menu */
+    .sidebar ul {
+        display: none;
+    }
+
+    .sidebar ul.open {
+        display: block;
+    }
+
+    .sidebar h2 {
+        cursor: pointer;
+        padding: 15px 20px;
+    }
+
+    .sidebar h2:after {
+        content: '▼';
+        float: right;
+        margin-right: 20px;
+        transition: transform 0.3s;
+    }
+
+    .sidebar h2.open:after {
+        transform: rotate(-180deg);
+    }
+}
+
+/* Mobile Menu Toggle Script */
+.sidebar h2 {
     cursor: pointer;
 }
 
-contact-form button:hover {
-    background: #FF6F61;
+.sidebar h2.open + ul {
+    display: block;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #4A90E2;
-    color: #fff;
+.sidebar h2.open:after {
+    transform: rotate(180deg);
 }
