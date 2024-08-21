@@ -373,6 +373,308 @@ section img {
     color: #F5F3F4;
 }
 
+/* Education Section Styling */
+#education {
+    padding: 30px;
+    background-color: #272527;
+    color: #F5F3F4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+#education h2 {
+    color: #FD0000;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.education-container {
+    text-align: center;
+}
+
+.education-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #FD0000;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+.education-details {
+    text-align: left;
+}
+
+.education-details h3 {
+    font-size: 1.8em;
+    color: #F5F3F4;
+    margin-bottom: 10px;
+}
+
+.education-details p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #F5F3F4;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #FD0000;
+    font-weight: bold;
+}
+
+
+/* Skills Acquired Section Styling */
+#skills-acquired {
+    padding: 30px;
+    background-color: #272527;
+    color: #F5F3F4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+#skills-acquired h2 {
+    color: #FD0000;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.skills-container {
+    text-align: left;
+}
+
+.skills-container ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+.skills-container ul li {
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #FD0000;
+    font-weight: bold;
+}
+
+/* Work Experience Section Styling */
+#work-experience {
+    padding: 30px;
+    background-color: #272527;
+    color: #F5F3F4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+#work-experience h2 {
+    color: #FD0000;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.work-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.work-photo img {
+    width: 300px; /* Increase the width of the photo */
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #FD0000;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+    margin-right: 30px;
+}
+
+.work-details {
+    flex: 1;
+    text-align: left;
+}
+
+.work-details h3 {
+    font-size: 1.8em;
+    color: #F5F3F4;
+    margin-bottom: 10px;
+}
+
+.work-details p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #F5F3F4;
+    margin-bottom: 15px;
+}
+
+.work-details ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.work-details ul li {
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #FD0000;
+    font-weight: bold;
+}
+
+/* Perfect for the Attraction Role Section Styling */
+#perfect-role {
+    padding: 30px;
+    background-color: #272527;
+    color: #F5F3F4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+#perfect-role h2 {
+    color: #FD0000;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.role-container {
+    text-align: left;
+}
+
+.role-details p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #F5F3F4;
+    margin-bottom: 20px;
+}
+
+.role-details ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+.role-details ul li {
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #FD0000;
+    font-weight: bold;
+}
+
+/* Attraction of Interest Section Styling */
+#attraction-interest {
+    padding: 30px;
+    background-color: #272527;
+    color: #F5F3F4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+#attraction-interest h2 {
+    color: #FD0000;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.attraction-container {
+    text-align: left;
+}
+
+.attraction-details p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #F5F3F4;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #FD0000;
+    font-weight: bold;
+}
+
+/* Future Development Section Styling */
+#future-development {
+    padding: 30px;
+    background-color: #272527;
+    color: #F5F3F4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+#future-development h2 {
+    color: #FD0000;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.development-container {
+    text-align: left;
+}
+
+.development-details p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #F5F3F4;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #FD0000;
+    font-weight: bold;
+}
+
+/* Footer Section Styling */
+#site-footer {
+    background-color: #0E0E0E;
+    color: #F5F3F4;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid #FD0000;
+    box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.5);
+    font-size: 1em;
+}
+
+#site-footer a {
+    color: #FD0000;
+    text-decoration: none;
+}
+
+#site-footer a:hover {
+    text-decoration: underline;
+}
+
 
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
