@@ -8,11 +8,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kevin Blinn - Main Navbar</title>
-  <link rel="stylesheet" href="./navStyle.css">
+  <link rel="stylesheet" href="./navStyle.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
@@ -20,42 +19,33 @@
     <nav>
       <input type="checkbox" id="show-search">
       <input type="checkbox" id="show-menu">
-      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <label for="show-menu" class="menu-icon" aria-label="Toggle menu">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </label>
+
       <div class="content">
-        <div class="logo"><a href="#">Kevin Blinn</a></div>
+        <div class="logo"><a href="/">Kevin Blinn</a></div>
         <ul class="links">
-
-          <!-- Home Link -->
-          <li><a href="https://kjblinn.com/">Home</a></li>
-
-          <!-- Github -->
-          <li><a href="https://github.com/KJBlinn01">GitHub</a></li>
-
-          <!-- Classes Dropdown -->
-          <li>
-            <a href="#" class="desktop-link">Classes</a>
-            <input type="checkbox" id="show-classes">
-            <label for="show-classes">Classes</label>
-            <ul>
-              <li><a href="https://kjblinn.com/classes/cpsc4910/index.html">4910 Senior Computing Practicum</a></li>
-              <li><a href="https://kjblinn.com/classes/cpsc4620/index.html">4620 Database Management Systems</a></li>
-              <li><a href="https://kjblinn.com/classes/cpsc4440/index.html">4440 Cloud Computing</a></li>
-              <li><a href="https://kjblinn.com/classes/cpsc4160/index.html">41602-D Game Engine Construction</a></li>
-              <li><a href="https://kjblinn.com/classes/cpsc3750/index.html">3750 Web Development</a></li>
-            </ul>
-          </li>
-          
-          <!-- Disney -->
-          <li><a href="https://kjblinn.com/disney/index.html">Disney</a></li>
-
+          <li><a href="/">Home</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/disney/index.html">Disney</a></li>
+          <li><a href="/resume/kevin-blinn-resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+          <li><a href="https://github.com/KJBlinn01" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:kevin.blinn.cs@gmail.com">Email</a></li>
         </ul>
       </div>
-      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
-      <form action="#" class="search-box">
-        <input type="text" placeholder="Type Something to Search..." required>
-        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+
+      <label for="show-search" class="search-icon" aria-label="Toggle search">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </label>
+      <form action="/search/" method="get" class="search-box" role="search">
+        <input name="q" type="text" placeholder="Search…" required aria-label="Search" />
+        <button type="submit" class="go-icon" aria-label="Go">
+          <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+        </button>
       </form>
     </nav>
   </div>
 </body>
 </html>
+
