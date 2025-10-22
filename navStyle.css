@@ -2,11 +2,12 @@
 
 /* ===== Hybrid Palette (scoped to navbar) ===== */
 :root {
-  --brand: #1D3557;     /* Deep navy (navbar base) */
-  --brand-900: #142941; /* Darker navy for mobile drawer */
-  --accent: #E63946;    /* Adventure red (hover/active) */
-  --secondary: #A8DADC; /* Soft teal (subtle accents) */
-  --ink-on-brand: #ffffff;
+  --brand:#4B1D77;      /* Deep Royal Purple */
+  --brand-900:#351559;  /* Darker for mobile drawer */
+  --accent:#D4AF37;     /* Antique Gold */
+  --secondary:#D9D3EB;  /* Soft lavender-gray */
+  --ink-on-brand:#FFFFFF;
+  --nav-h:70px;
 }
 
 * {
