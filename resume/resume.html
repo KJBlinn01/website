@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Resume — Kevin Blinn | Software & Game Developer</title>
+        <meta name="description" content="Interactive resume of Kevin Blinn — entertainment tech and game development experience, skills, and education." />
+      
+        <!-- Main site styles -->
+        <link href="../styles.css" rel="stylesheet" type="text/css" />
+        <!-- Navbar styles (needed because navbar is injected) -->
+        <link href="../navStyle.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      
+        <!-- Page-specific styles -->
+        <link href="resume.css" rel="stylesheet" type="text/css" />
+      
+        <!-- Navbar loader -->
+        <script src="../load-navbar.js" defer></script>
+      
+        <!-- (OG + JSON-LD can remain as you had them) -->
+    </head>
+      
+
+<body>
+  <a class="sr-only" href="#main">Skip to content</a>
+
+  <header>
+    <div id="navbar-placeholder" role="navigation" aria-label="Main"></div>
+  </header>
+
+  <main id="main" class="page">
+    <!-- HERO -->
+    <section class="resume-hero" aria-label="Resume header">
+      <div>
+        <h1>Resume</h1>
+        <p class="lead">
+          Interactive overview of my experience across entertainment tech, gameplay systems, and web/cloud.
+        </p>
+        <div class="resume-actions">
+          <a class="btn primary" href="kevin-blinn-resume.pdf" target="_blank" rel="noopener">Download PDF</a>
+          <button class="btn secondary" id="toggleViewerBtn" type="button">Show Inline Viewer</button>
+          <button class="btn secondary" id="expandAllBtn" type="button">Expand All</button>
+          <button class="btn secondary" id="collapseAllBtn" type="button">Collapse All</button>
+          <button class="btn secondary" id="printBtn" type="button">Print</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- INLINE VIEWER -->
+    <section id="inline-viewer" class="inline-viewer" hidden aria-label="Resume PDF preview">
+      <iframe
+        title="Resume PDF preview"
+        src="kevin-blinn-resume.pdf#view=fitH"
+        loading="lazy"
+      ></iframe>
+    </section>
+
+    <!-- FILTERS -->
+    <section aria-label="Filters">
+      <h2>Filter Experience</h2>
+      <div class="filter-bar" role="toolbar" aria-label="Experience filters">
+        <button class="filter-pill active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-pill" data-filter="web">Web</button>
+        <button class="filter-pill" data-filter="game">Game Dev</button>
+        <button class="filter-pill" data-filter="cloud">Cloud</button>
+        <button class="filter-pill" data-filter="leadership">Leadership</button>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section aria-label="Experience timeline">
+      <h2>Experience</h2>
+      <ol class="timeline">
+        <!-- Item 1 -->
+        <li class="timeline-item" data-tags="web cloud">
+          <div class="dot" aria-hidden="true"></div>
+          <article class="xp-card">
+            <header class="xp-header">
+              <h3>OpenCritic Collection App — Developer</h3>
+              <p class="xp-meta">React • Node • AWS Lambda | 2024</p>
+              <ul class="tag-row">
+                <li class="pill">Web</li>
+                <li class="pill">Cloud</li>
+                <li class="pill">API</li>
+              </ul>
+            </header>
+            <details>
+              <summary>Overview</summary>
+              <ul class="xp-bullets">
+                <li>Built serverless endpoints and responsive UI for search, list, and detail views of game reviews.</li>
+                <li>Implemented collection stats and performant pagination.</li>
+                <li>Optimized perceived load via skeleton states and lazy-loading.</li>
+              </ul>
+              <p class="xp-links"><a href="../projects/opencritic/">Case study →</a></p>
+            </details>
+          </article>
+        </li>
+
+        <!-- Item 2 -->
+        <li class="timeline-item" data-tags="game">
+          <div class="dot" aria-hidden="true"></div>
+          <article class="xp-card">
+            <header class="xp-header">
+              <h3>Escape the Clutches — Gameplay Engineer</h3>
+              <p class="xp-meta">Python • Pygame | 2024</p>
+              <ul class="tag-row">
+                <li class="pill">Game Dev</li>
+                <li class="pill">Gameplay</li>
+              </ul>
+            </header>
+            <details>
+              <summary>Overview</summary>
+              <ul class="xp-bullets">
+                <li>Developed player/enemy mechanics, QTEs, and scoring systems using Agile sprints.</li>
+                <li>Adjusted collision responses for improved player feel.</li>
+              </ul>
+              <p class="xp-links"><a href="../projects/escape-the-clutches/">Devlog →</a></p>
+            </details>
+          </article>
+        </li>
+
+        <!-- Item 3 -->
+        <li class="timeline-item" data-tags="web leadership">
+          <div class="dot" aria-hidden="true"></div>
+          <article class="xp-card">
+            <header class="xp-header">
+              <h3>Disney Showcase — Portfolio Engineer</h3>
+              <p class="xp-meta">UX • Frontend | 2024</p>
+              <ul class="tag-row">
+                <li class="pill">Web</li>
+                <li class="pill">Leadership</li>
+              </ul>
+            </header>
+            <details>
+              <summary>Overview</summary>
+              <ul class="xp-bullets">
+                <li>Curated Disney-relevant case studies and refined recruiter flow.</li>
+                <li>Added accessibility and SEO enhancements (skip links, OG tags).</li>
+              </ul>
+              <p class="xp-links"><a href="../disney/index.html">View page →</a></p>
+            </details>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+    <!-- EDUCATION -->
+    <section aria-label="Education">
+      <h2>Education</h2>
+      <div class="edu-card">
+        <h3>Clemson University — B.S. in Computer Science</h3>
+        <p class="xp-meta">Graduated December 2024</p>
+        <ul class="tag-row">
+          <li class="pill">Web</li>
+          <li class="pill">Game Dev</li>
+          <li class="pill">Cloud</li>
+        </ul>
+        <p class="muted">
+          Relevant coursework: Web Development, Database Management Systems, Game Engine Construction, and Cloud Computing.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Kevin Blinn. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Inline viewer toggle
+    const viewer = document.getElementById('inline-viewer');
+    const toggleViewerBtn = document.getElementById('toggleViewerBtn');
+    toggleViewerBtn?.addEventListener('click', () => {
+      const hidden = viewer.hasAttribute('hidden');
+      viewer.toggleAttribute('hidden');
+      toggleViewerBtn.textContent = hidden ? 'Hide Inline Viewer' : 'Show Inline Viewer';
+    });
+
+    // Expand/collapse all
+    const detailsList = () => Array.from(document.querySelectorAll('details'));
+    document.getElementById('expandAllBtn')?.addEventListener('click', () => detailsList().forEach(d => d.open = true));
+    document.getElementById('collapseAllBtn')?.addEventListener('click', () => detailsList().forEach(d => d.open = false));
+
+    // Print
+    document.getElementById('printBtn')?.addEventListener('click', () => window.print());
+
+    // Filters
+    const pills = Array.from(document.querySelectorAll('.filter-pill'));
+    const items = Array.from(document.querySelectorAll('.timeline-item'));
+    function applyFilter(tag) {
+      items.forEach(item => {
+        const tags = (item.getAttribute('data-tags') || '').split(/\s+/);
+        item.style.display = (tag === 'all' || tags.includes(tag)) ? '' : 'none';
+      });
+    }
+    pills.forEach(btn => {
+      btn.addEventListener('click', () => {
+        pills.forEach(p => { p.classList.remove('active'); p.setAttribute('aria-pressed', 'false'); });
+        btn.classList.add('active'); btn.setAttribute('aria-pressed', 'true');
+        applyFilter(btn.getAttribute('data-filter'));
+      });
+    });
+    applyFilter('all');
+  </script>
+</body>
+</html>
