@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Resume — Kevin Blinn | Software & Game Developer</title>
-        <meta name="description" content="Interactive resume of Kevin Blinn — entertainment tech and game development experience, skills, and education." />
-      
-        <!-- Main site styles -->
-        <link href="../styles.css" rel="stylesheet" type="text/css" />
-        <!-- Navbar styles (needed because navbar is injected) -->
-        <link href="../navStyle.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-      
-        <!-- Page-specific styles -->
-        <link href="resume.css" rel="stylesheet" type="text/css" />
-      
-        <!-- Navbar loader -->
-        <script src="../load-navbar.js" defer></script>
-      
-        <!-- (OG + JSON-LD can remain as you had them) -->
-    </head>
-      
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume — Kevin Blinn | Field-Targeted</title>
+  <meta name="description" content="Interactive, field-targeted resume for Tech or Food Industry.">
+
+  <!-- Site-wide styles -->
+  <link href="../styles.css" rel="stylesheet" type="text/css" />
+  <!-- Navbar styles (navbar is injected) -->
+  <link href="../navStyle.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <!-- Page-specific styles -->
+  <link href="resume.css" rel="stylesheet" type="text/css" />
+
+  <!-- Navbar loader -->
+  <script src="../load-navbar.js" defer></script>
+
+  <!-- OG -->
+  <meta property="og:title" content="Resume — Kevin Blinn" />
+  <meta property="og:description" content="Choose Tech or Food Industry to view a tailored resume, skills, and experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kjblinn.com/resume/" />
+  <meta property="og:image" content="https://kjblinn.com/images/og-cover.png" />
+</head>
 
 <body>
   <a class="sr-only" href="#main">Skip to content</a>
@@ -35,45 +38,93 @@
       <div>
         <h1>Resume</h1>
         <p class="lead">
-          Interactive overview of my experience across entertainment tech, gameplay systems, and web/cloud.
+          Choose the industry you’re hiring for. I’ll show the most relevant resume, skills, and experience.
         </p>
+
+        <!-- Industry Switcher -->
+        <div class="field-switcher" role="tablist" aria-label="Industry selector">
+          <button class="seg-btn active" role="tab" aria-selected="true" aria-controls="panel-tech" id="tab-tech" data-field="tech">
+            Tech
+          </button>
+          <button class="seg-btn" role="tab" aria-selected="false" aria-controls="panel-food" id="tab-food" data-field="food">
+            Food Industry
+          </button>
+        </div>
+
+        <!-- Contextual actions -->
         <div class="resume-actions">
-          <a class="btn primary" href="kevin-blinn-resume.pdf" target="_blank" rel="noopener">Download PDF</a>
+          <a class="btn primary" id="viewPdfBtn" href="kevin-blinn-resume-tech.pdf" target="_blank" rel="noopener">View PDF</a>
+          <a class="btn secondary" id="downloadPdfBtn" href="kevin-blinn-resume-tech.pdf" download>Download</a>
           <button class="btn secondary" id="toggleViewerBtn" type="button">Show Inline Viewer</button>
-          <button class="btn secondary" id="expandAllBtn" type="button">Expand All</button>
-          <button class="btn secondary" id="collapseAllBtn" type="button">Collapse All</button>
           <button class="btn secondary" id="printBtn" type="button">Print</button>
         </div>
       </div>
     </section>
 
-    <!-- INLINE VIEWER -->
+    <!-- INLINE VIEWER + DOWNLOAD PROMPT -->
     <section id="inline-viewer" class="inline-viewer" hidden aria-label="Resume PDF preview">
-      <iframe
-        title="Resume PDF preview"
-        src="kevin-blinn-resume.pdf#view=fitH"
-        loading="lazy"
-      ></iframe>
+      <div class="viewer-frame">
+        <iframe title="Resume PDF preview" id="resumeIframe" src="kevin-blinn-resume-tech.pdf#view=fitH" loading="lazy"></iframe>
+      </div>
+      <div class="download-prompt" id="downloadPrompt" aria-live="polite">
+        <p>Would you like to download this resume?</p>
+        <div class="prompt-actions">
+          <a class="btn primary" id="promptDownloadBtn" href="kevin-blinn-resume-tech.pdf" download>Download Resume</a>
+          <button class="btn secondary" id="promptDismissBtn" type="button">No, thanks</button>
+        </div>
+      </div>
     </section>
 
-    <!-- FILTERS -->
-    <section aria-label="Filters">
-      <h2>Filter Experience</h2>
-      <div class="filter-bar" role="toolbar" aria-label="Experience filters">
-        <button class="filter-pill active" data-filter="all" aria-pressed="true">All</button>
-        <button class="filter-pill" data-filter="web">Web</button>
-        <button class="filter-pill" data-filter="game">Game Dev</button>
-        <button class="filter-pill" data-filter="cloud">Cloud</button>
-        <button class="filter-pill" data-filter="leadership">Leadership</button>
+    <!-- GENERAL SKILLS (industry-specific) -->
+    <section aria-label="General skills">
+      <h2>General Skills</h2>
+
+      <!-- Tech skills -->
+      <div class="skills-grid" data-field="tech" id="panel-tech">
+        <div class="skill-card"><h3>Languages & Libraries</h3><ul>
+          <li>TypeScript / JavaScript, React</li>
+          <li>Python (Pygame), C++</li>
+          <li>HTML/CSS, Accessibility</li>
+        </ul></div>
+        <div class="skill-card"><h3>Platforms & Cloud</h3><ul>
+          <li>AWS Lambda, API Gateway</li>
+          <li>Node.js, REST APIs</li>
+          <li>Git/GitHub, CI basics</li>
+        </ul></div>
+        <div class="skill-card"><h3>Gameplay & UX</h3><ul>
+          <li>Gameplay systems & tuning</li>
+          <li>State machines, collision</li>
+          <li>UI polish, performance</li>
+        </ul></div>
+      </div>
+
+      <!-- Food Industry skills -->
+      <div class="skills-grid" data-field="food" id="panel-food" hidden>
+        <div class="skill-card"><h3>Operations</h3><ul>
+          <li>Opening/Closing, Station Readiness</li>
+          <li>Queue & Line Management</li>
+          <li>Inventory & Waste Control</li>
+        </ul></div>
+        <div class="skill-card"><h3>Service & Guest Care</h3><ul>
+          <li>High-Volume Guest Service</li>
+          <li>POS Accuracy, Cash Handling</li>
+          <li>Brand/Show Standards (Disney)</li>
+        </ul></div>
+        <div class="skill-card"><h3>Team & Leadership</h3><ul>
+          <li>Shift Lead Coordination</li>
+          <li>Training & Onboarding</li>
+          <li>Safety & Cleanliness</li>
+        </ul></div>
       </div>
     </section>
 
     <!-- EXPERIENCE -->
     <section aria-label="Experience timeline">
       <h2>Experience</h2>
-      <ol class="timeline">
-        <!-- Item 1 -->
-        <li class="timeline-item" data-tags="web cloud">
+
+      <ol class="timeline" id="experienceTimeline">
+        <!-- ===== TECH ITEMS ===== -->
+        <li class="timeline-item" data-field="tech">
           <div class="dot" aria-hidden="true"></div>
           <article class="xp-card">
             <header class="xp-header">
@@ -97,8 +148,7 @@
           </article>
         </li>
 
-        <!-- Item 2 -->
-        <li class="timeline-item" data-tags="game">
+        <li class="timeline-item" data-field="tech">
           <div class="dot" aria-hidden="true"></div>
           <article class="xp-card">
             <header class="xp-header">
@@ -112,7 +162,7 @@
             <details>
               <summary>Overview</summary>
               <ul class="xp-bullets">
-                <li>Developed player/enemy mechanics, QTEs, and scoring systems using Agile sprints.</li>
+                <li>Developed player/enemy mechanics, QTEs, and scoring using Agile sprints.</li>
                 <li>Adjusted collision responses for improved player feel.</li>
               </ul>
               <p class="xp-links"><a href="../projects/escape-the-clutches/">Devlog →</a></p>
@@ -120,8 +170,7 @@
           </article>
         </li>
 
-        <!-- Item 3 -->
-        <li class="timeline-item" data-tags="web leadership">
+        <li class="timeline-item" data-field="tech">
           <div class="dot" aria-hidden="true"></div>
           <article class="xp-card">
             <header class="xp-header">
@@ -142,6 +191,99 @@
             </details>
           </article>
         </li>
+
+        <!-- ===== FOOD ITEMS ===== -->
+        <li class="timeline-item" data-field="food" hidden>
+          <div class="dot" aria-hidden="true"></div>
+          <article class="xp-card">
+            <header class="xp-header">
+              <h3>FOH — Oga’s Cantina (The Walt Disney Company)</h3>
+              <p class="xp-meta">Orlando, FL | January 2025 – Current</p>
+              <ul class="tag-row">
+                <li class="pill">Service</li>
+                <li class="pill">Operations</li>
+                <li class="pill">Leadership</li>
+              </ul>
+            </header>
+            <details>
+              <summary>Overview</summary>
+              <ul class="xp-bullets">
+                <li>Delivered story-driven guest experiences in a high-volume themed environment.</li>
+                <li>Coordinated seating/turnover and line flow; supported POS and order accuracy.</li>
+                <li>Partnered across roles to maintain pacing and guest satisfaction.</li>
+                <li>Upheld safety, cleanliness, and show standards per Disney guidelines.</li>
+              </ul>
+            </details>
+          </article>
+        </li>
+
+        <li class="timeline-item" data-field="food" hidden>
+          <div class="dot" aria-hidden="true"></div>
+          <article class="xp-card">
+            <header class="xp-header">
+              <h3>Coffee Master — Aramark</h3>
+              <p class="xp-meta">Clemson, SC | January 2023 – August 2024</p>
+              <ul class="tag-row">
+                <li class="pill">Service</li>
+                <li class="pill">Operations</li>
+                <li class="pill">Leadership</li>
+              </ul>
+            </header>
+            <details>
+              <summary>Overview</summary>
+              <ul class="xp-bullets">
+                <li>Prepared espresso & brewed beverages to brand standards; ensured consistent quality.</li>
+                <li>Trained peers on drink builds, equipment care, and customer engagement.</li>
+                <li>Handled opening/closing, inventory checks, and bar readiness for peaks.</li>
+              </ul>
+            </details>
+          </article>
+        </li>
+
+        <li class="timeline-item" data-field="food" hidden>
+          <div class="dot" aria-hidden="true"></div>
+          <article class="xp-card">
+            <header class="xp-header">
+              <h3>Server — Applebee’s</h3>
+              <p class="xp-meta">Conway, SC | September 2019 – November 2021</p>
+              <ul class="tag-row">
+                <li class="pill">Service</li>
+                <li class="pill">Operations</li>
+              </ul>
+            </header>
+            <details>
+              <summary>Overview</summary>
+              <ul class="xp-bullets">
+                <li>Managed multiple tables with accurate order entry and timing.</li>
+                <li>Handled payments and ensured check accuracy.</li>
+                <li>Partnered with hosts and kitchen to meet guest expectations.</li>
+              </ul>
+            </details>
+          </article>
+        </li>
+
+        <li class="timeline-item" data-field="food" hidden>
+          <div class="dot" aria-hidden="true"></div>
+          <article class="xp-card">
+            <header class="xp-header">
+              <h3>Shift Lead — Dunkin’</h3>
+              <p class="xp-meta">Bluffton, SC | June 2020 – August 2020</p>
+              <ul class="tag-row">
+                <li class="pill">Leadership</li>
+                <li class="pill">Operations</li>
+                <li class="pill">Service</li>
+              </ul>
+            </header>
+            <details>
+              <summary>Overview</summary>
+              <ul class="xp-bullets">
+                <li>Led opening/closing shifts; assigned stations; supported drive-thru throughput.</li>
+                <li>Monitored product levels, waste, and station readiness during peaks.</li>
+                <li>Ensured register accuracy and food safety compliance.</li>
+              </ul>
+            </details>
+          </article>
+        </li>
       </ol>
     </section>
 
@@ -159,7 +301,23 @@
         <p class="muted">
           Relevant coursework: Web Development, Database Management Systems, Game Engine Construction, and Cloud Computing.
         </p>
+
+        <!-- Link to future education page -->
+        <p class="edu-actions">
+          <a class="btn secondary" href="../education/index.html">More about my education →</a>
+        </p>
       </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section aria-label="Ways to contact me">
+      <h2>Ways to contact me</h2>
+      <div class="contact-grid">
+        <a class="btn primary" href="mailto:kevin.blinn.cs@gmail.com">Email Me</a>
+        <a class="btn secondary" href="https://www.linkedin.com/in/kevin-blinn-5697132b8/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn secondary" href="https://github.com/KJBlinn01" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="muted">Prefer a call? Include your number in the email and I’ll reach out.</p>
     </section>
   </main>
 
@@ -168,43 +326,97 @@
   </footer>
 
   <script>
-    // Update year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // ===== Config: PDF filenames for each track =====
+    const PDF_FOR = {
+      tech: 'kevin-blinn-resume-tech.pdf',
+      food: 'kevin-blinn-resume-food.pdf'
+    };
+
+    const yearEl = document.getElementById('year');
+    const viewer = document.getElementById('inline-viewer');
+    const resumeIframe = document.getElementById('resumeIframe');
+    const toggleViewerBtn = document.getElementById('toggleViewerBtn');
+    const viewPdfBtn = document.getElementById('viewPdfBtn');
+    const downloadPdfBtn = document.getElementById('downloadPdfBtn');
+    const promptDownloadBtn = document.getElementById('promptDownloadBtn');
+    const promptDismissBtn = document.getElementById('promptDismissBtn');
+    const downloadPrompt = document.getElementById('downloadPrompt');
+
+    const segButtons = Array.from(document.querySelectorAll('.seg-btn'));
+    const xpItems = Array.from(document.querySelectorAll('.timeline-item'));
+    const skillPanels = Array.from(document.querySelectorAll('.skills-grid'));
+
+    // Year
+    yearEl.textContent = new Date().getFullYear();
 
     // Inline viewer toggle
-    const viewer = document.getElementById('inline-viewer');
-    const toggleViewerBtn = document.getElementById('toggleViewerBtn');
     toggleViewerBtn?.addEventListener('click', () => {
       const hidden = viewer.hasAttribute('hidden');
       viewer.toggleAttribute('hidden');
       toggleViewerBtn.textContent = hidden ? 'Hide Inline Viewer' : 'Show Inline Viewer';
     });
 
-    // Expand/collapse all
-    const detailsList = () => Array.from(document.querySelectorAll('details'));
-    document.getElementById('expandAllBtn')?.addEventListener('click', () => detailsList().forEach(d => d.open = true));
-    document.getElementById('collapseAllBtn')?.addEventListener('click', () => detailsList().forEach(d => d.open = false));
+    // Download prompt dismiss
+    promptDismissBtn?.addEventListener('click', () => {
+      downloadPrompt.style.display = 'none';
+    });
 
-    // Print
+    function setField(field) {
+    // Tabs
+    segButtons.forEach(b => {
+      const active = b.dataset.field === field;
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-selected', String(active));
+    });
+
+    // Show skills panel for the selected field only
+    // (Use a strong toggle and remove any inline display overrides)
+    skillPanels.forEach(p => {
+      const show = p.dataset.field === field;
+      if (show) {
+        p.removeAttribute('hidden');
+        p.style.removeProperty('display');
+      } else {
+        p.setAttribute('hidden', '');
+        p.style.removeProperty('display');
+      }
+    });
+
+    // Show/hide experience items by field
+    xpItems.forEach(item => {
+      const show = item.getAttribute('data-field') === field;
+      if (show) {
+        item.removeAttribute('hidden');
+        item.style.removeProperty('display');
+      } else {
+        item.setAttribute('hidden', '');
+        item.style.removeProperty('display');
+      }
+    });
+
+    // Update PDF links + viewer
+    const pdf = PDF_FOR[field];
+    viewPdfBtn.href = pdf;
+    downloadPdfBtn.href = pdf;
+    promptDownloadBtn.href = pdf;
+    resumeIframe.src = pdf + '#view=fitH';
+    viewer.removeAttribute('hidden');
+    toggleViewerBtn.textContent = 'Hide Inline Viewer';
+
+    // Re-show the polite download prompt on field change
+    downloadPrompt.style.display = '';
+  }
+
+    // Wire tab click
+    segButtons.forEach(btn => {
+      btn.addEventListener('click', () => setField(btn.dataset.field));
+    });
+
+    // Print current view
     document.getElementById('printBtn')?.addEventListener('click', () => window.print());
 
-    // Filters
-    const pills = Array.from(document.querySelectorAll('.filter-pill'));
-    const items = Array.from(document.querySelectorAll('.timeline-item'));
-    function applyFilter(tag) {
-      items.forEach(item => {
-        const tags = (item.getAttribute('data-tags') || '').split(/\s+/);
-        item.style.display = (tag === 'all' || tags.includes(tag)) ? '' : 'none';
-      });
-    }
-    pills.forEach(btn => {
-      btn.addEventListener('click', () => {
-        pills.forEach(p => { p.classList.remove('active'); p.setAttribute('aria-pressed', 'false'); });
-        btn.classList.add('active'); btn.setAttribute('aria-pressed', 'true');
-        applyFilter(btn.getAttribute('data-filter'));
-      });
-    });
-    applyFilter('all');
+    // Default field
+    setField('tech');
   </script>
 </body>
 </html>

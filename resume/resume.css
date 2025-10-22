@@ -1,7 +1,9 @@
-/* Uses the same palette variables defined in styles.css:
-   --bg, --ink, --brand, --accent, --secondary, --card, --muted, --radius */
+/* Uses the same color variables from ../styles.css */
 
-/* Hero header */
+/* Force anything marked [hidden] to be truly invisible */
+[hidden] { display: none !important; }
+
+/* Hero */
 .resume-hero h1 {
     color: var(--brand);
     margin: 0 0 8px;
@@ -10,7 +12,33 @@
   .resume-hero .lead { margin: 0 0 16px; }
   .resume-actions { display: flex; gap: 10px; flex-wrap: wrap; }
   
-  /* Inline PDF viewer */
+  /* Field Switcher (segmented control) — bigger buttons */
+  .field-switcher {
+    display: inline-flex;
+    border: 2px solid var(--brand);
+    border-radius: 999px;
+    overflow: hidden;
+    margin: 14px 0 16px;
+    background: var(--secondary);
+  }
+  .seg-btn {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: var(--brand);
+    font-weight: 800;
+    font-size: 1.05rem;            /* bigger */
+    padding: 12px 22px;            /* bigger */
+    cursor: pointer;
+    transition: all .2s ease;
+  }
+  .seg-btn:hover { background: var(--accent); color: #fff; }
+  .seg-btn.active {
+    background: var(--brand);
+    color: #fff;
+  }
+  
+  /* Inline viewer — smaller height + nice frame */
   .inline-viewer {
     margin-top: 16px;
     background: var(--card);
@@ -19,45 +47,56 @@
     padding: 12px;
     box-shadow: 0 8px 18px rgba(0,0,0,.05);
   }
+  .viewer-frame {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  }
   .inline-viewer iframe {
     width: 100%;
-    height: 72vh;
+    height: 55vh;                 /* smaller viewer */
+    max-height: 560px;            /* cap height on large screens */
     border: none;
-    border-radius: 8px;
+    display: block;
   }
-  
-  /* Filter bar */
-  .filter-bar {
+  .download-prompt {
+    margin-top: 12px;
+    border: 1px dashed var(--secondary);
+    border-radius: 12px;
+    padding: 10px 12px;
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 16px;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
   }
-  .filter-pill {
-    border: 2px solid var(--brand);
-    background: var(--secondary);
-    color: var(--brand);
-    padding: 6px 12px;
-    border-radius: 999px;
+  .download-prompt p {
+    margin: 0;
+    color: var(--ink);
     font-weight: 600;
-    cursor: pointer;
-    transition: all .2s ease;
   }
-  .filter-pill:hover {
-    background: var(--accent);
-    color: #fff;
-    border-color: var(--accent);
+  .prompt-actions { display: flex; gap: 8px; }
+  
+  /* Skills — swaps with industry */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 14px;
   }
-  .filter-pill.active {
-    background: var(--brand);
-    color: #fff;
+  .skill-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    border-top: 4px solid var(--secondary);
+    box-shadow: 0 8px 18px rgba(0,0,0,.05);
   }
+  .skill-card h3 { margin: 0 0 8px; color: var(--brand); }
+  .skill-card ul { margin: 0; padding-left: 18px; }
   
   /* Timeline */
   .timeline {
     list-style: none;
     margin: 0;
-    padding: 0 0 0 26px; /* space for line and dot */
+    padding: 0 0 0 26px;
     position: relative;
   }
   .timeline::before {
@@ -86,7 +125,7 @@
     box-shadow: 0 2px 6px rgba(0,0,0,.15);
   }
   
-  /* Experience Card */
+  /* Experience cards */
   .xp-card {
     background: var(--card);
     border-radius: var(--radius);
@@ -100,72 +139,12 @@
     border-top-color: var(--accent);
     box-shadow: 0 12px 28px rgba(0,0,0,.08);
   }
-  .xp-header h3 {
-    margin: 0 0 2px;
-    color: var(--brand);
-  }
-  .xp-meta {
-    margin: 0 0 8px;
-    color: var(--muted);
-    font-size: 14px;
-  }
-  .tag-row {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0 0 8px 0;
-    list-style: none;
-  }
-  .pill {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: var(--secondary);
-    color: var(--brand);
-  }
+  .xp-header h3 { margin: 0 0 2px; color: var(--brand); }
+  .xp-meta { margin: 0 0 8px; color: var(--muted); font-size: 14px; }
+  .tag-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 8px 0; list-style: none; padding: 0; }
+  .pill { display: inline-block; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: var(--secondary); color: var(--brand); }
   
-  /* Details/summary */
-  details {
-    border-top: 1px solid rgba(0,0,0,.06);
-    padding-top: 10px;
-  }
-  details summary {
-    cursor: pointer;
-    list-style: none;
-    color: var(--brand);
-    font-weight: 600;
-    padding: 6px 0;
-  }
-  details[open] summary {
-    color: var(--accent);
-  }
-  details summary::-webkit-details-marker { display: none; }
-  details summary::after {
-    content: "＋";
-    float: right;
-    color: var(--muted);
-    transition: transform .2s ease, color .2s ease;
-  }
-  details[open] summary::after {
-    content: "–";
-    color: var(--accent);
-  }
-  .xp-bullets {
-    margin: 6px 0 0 18px;
-  }
-  .xp-bullets li {
-    margin-bottom: 6px;
-  }
-  .xp-links a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-  .xp-links a:hover { text-decoration: underline; }
-  
-  /* Education card (lightweight) */
+  /* Education */
   .edu-card {
     background: var(--card);
     border-radius: var(--radius);
@@ -173,13 +152,29 @@
     border-left: 5px solid var(--brand);
     box-shadow: 0 8px 18px rgba(0,0,0,.05);
   }
+  .edu-actions { margin-top: 10px; }
   
-  /* Print rules (hide interactive controls, show content cleanly) */
+  /* Contact */
+  .contact-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  
+  /* Print */
   @media print {
-    .wrapper, #navbar-placeholder, .resume-actions, .filter-bar, #inline-viewer { display: none !important; }
+    .wrapper, #navbar-placeholder, .resume-actions, #inline-viewer, .field-switcher { display: none !important; }
     body { background: #fff; }
     .page { padding: 0; }
     .timeline::before { background: #bbb; }
     a::after { content: " (" attr(href) ")"; font-size: 12px; color: #555; }
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 720px) {
+    .seg-btn { font-size: 1rem; padding: 10px 18px; }
+    .inline-viewer iframe { height: 50vh; max-height: 460px; }
+    .prompt-actions { flex-wrap: wrap; }
   }
   
